@@ -65,7 +65,7 @@ def parse_codex(path, ledger, as_of):
                 or v.get("forked_from_id")
                 or spawn.get("parent_thread_id")
             )
-            is_child = bool(parent or spawn or isinstance(src, dict))
+            is_child = bool(parent or spawn or isinstance(src, dict) and "subagent" in src)
             if parent:
                 ledger.parents["codex", str(v.get("id") or v.get("session_id"))] = str(parent)
             continue

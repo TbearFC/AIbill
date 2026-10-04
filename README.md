@@ -26,41 +26,66 @@ Without installation, `python3 agentcost_cli.py ...` also works.
 
 ## Research workspace and one-command local deployment
 
-On macOS, double-click `start.command` in Finder (Python 3.9+ required). The
-terminal prints a loopback URL; open it to use the dashboard. From a terminal:
+On macOS, double-click `start.command` (Python 3.9+ required), or run:
 
 ```bash
 ./start.sh
-# equivalent, including after installing the wheel:
-python3 -m agentcost dashboard
+# after installation, from any working directory:
+agentcost dashboard
+# synthetic demo is an explicit opt-in:
+agentcost dashboard --demo
 ```
 
-Default: synthetic demo, fictional prices, fixed demo checkpoint, port 8765.
-No installation, package download, model API key, or log access is needed.
-Use `--port 8766` if the default port is occupied, or `--port 0` for a free port.
-Stop with Ctrl+C. The launcher does not automatically open a browser.
+**The dashboard now defaults to retained local logs, not demo data.** It discovers
+Codex active and archived sessions under `CODEX_HOME` or the current user's
+`~/.codex`, and Claude Code project/subagent JSONL under `CLAUDE_CONFIG_DIR` or
+`~/.claude`. No personal path is embedded in the source distribution.
 
-To create and serve a snapshot of actual local logs, explicitly opt in:
+Use the **Log directories** dialog to set your own Codex / Claude Code roots and
+an optional verified price catalog. Existing environment variables and explicit
+CLI roots take priority at startup; otherwise the last local settings are reused.
+`--codex-home` also accepts multiple roots separated by commas. A Claude root can
+be its configuration directory or its `projects` directory.
 
 ```bash
-./start.sh --local --agent codex --out reports/local
-./start.sh --local --agent generic --input examples/events.jsonl --port 8766
+agentcost dashboard --codex-home ./my-codex-root --claude-home ./my-claude-root
+agentcost dashboard --prices ./my-prices.json --port 8766
+agentcost dashboard --agent generic --input examples/events.jsonl
 ```
 
-The workspace includes overview, model bucket details, forecast evidence, budget
-comparison, audit, Agent/date filters, day selection, dark mode, and JSON export.
-Dates filter overview and trends; model, forecast and audit panels retain the full
-report period and label this scope. Budget comparison uses the observed checkpoint;
-it does not recompute forecasts, enforce limits, or claim calibrated probabilities.
+The loopback URL is printed after collection. Port 8765 is the default; `--port 0`
+selects a free port. Stop with Ctrl+C. The launcher does not open a browser.
 
-This is a static snapshot. Restart the command to regenerate it after new usage.
-The server binds only to `127.0.0.1` and serves the dashboard, aggregate JSON, and
-health endpoint. It does not expose source logs or directory listings.
+Click **Read logs again** to discover and reread logs. Optional 60-second automatic
+refresh is off by default. Refresh runs in the background; the page retains the
+last complete snapshot until success. New files and appended usage are included.
+Failures retain the last report and show a diagnostic message. A supplied `--as-of`
+fixes historical replay; omit it for the current observation boundary.
 
-This one-command deployment is local to the computer. Public cloud hosting is a
-separate step: the standalone `report.html` and `usage.json` can be hosted as static
-files. Only publish synthetic output unless you deliberately intend to disclose
-aggregates; actual log collection needs a local Python process.
+Overview source cards distinguish accepted usage, missing directories, empty roots,
+and files with no accepted usage. An absent source is never replaced by synthetic
+records. Tokens and mutually exclusive cache/output buckets come from accepted
+log records; forecasts are separate experimental priors. Actual invoices and quotas
+remain unavailable. Unknown model prices remain unknown, not zero or fictional rates.
+
+Agent/date filters affect overview, trends, and model details consistently. Forecast
+and audit panels retain their stated historical evidence scope. Other interactions
+include day selection, budget comparison, dark mode, and aggregate JSON export.
+
+By default live output and settings stay in private per-user application storage:
+macOS `~/Library/Application Support/AIbill/reports/dashboard`, Linux's XDG data
+location, or Windows' local application data. `--out` overrides the output directory.
+Directory settings are stored locally in `sources.json` (owner-only file permissions
+on Unix); they
+are not embedded in the HTML, included in aggregate JSON, or served as a file.
+The settings API is accessible only to the local dashboard. Raw prompts, request
+IDs, session IDs, and log contents are never served or exported.
+
+The server binds only to `127.0.0.1`, serves an explicit set of aggregate/UI routes,
+and requires a matching Origin and custom header for scan requests. It provides no
+filesystem browser or remote log upload. Standalone exported reports work offline;
+refresh is available only through the local Python server. Public hosting is a
+separate step and cannot read someone else's local logs from a web browser.
 
 ## Real logs
 
@@ -139,7 +164,7 @@ generate HTML or write files. Pass a `Prices(path)` object to use a custom catal
 | `agentcost/core.py` | Normalization, deduplication, and catalog pricing |
 | `agentcost/analysis.py` | Aggregation, history qualification, and empirical priors |
 | `agentcost/report.py`, `agentcost/dashboard.html` | Offline research workspace |
-| `agentcost/dashboard.py`, `start.sh`, `start.command` | Loopback server and local launchers |
+| `agentcost/dashboard.py`, `agentcost/local.py`, `start.sh`, `start.command` | Local collection, private settings, refresh service, and launchers |
 | `agentcost/demo.py` | Synthetic input generation |
 | `tests/` | Synthetic unit, regression, and CLI integration fixtures |
 

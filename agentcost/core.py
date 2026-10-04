@@ -164,7 +164,11 @@ class Ledger:
 
 class Prices:
     def __init__(self, path=None):
-        p = pathlib.Path(path) if path else pathlib.Path(__file__).with_name("prices.json")
+        p = (
+            pathlib.Path(path).expanduser()
+            if path
+            else pathlib.Path(__file__).with_name("prices.json")
+        )
         self.data = json.loads(p.read_text())
         if not isinstance(self.data, dict):
             raise ValueError("price catalog must be an object")

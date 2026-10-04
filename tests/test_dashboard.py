@@ -72,7 +72,7 @@ class Dashboard(unittest.TestCase):
     def test_host_check_and_read_only_methods(self):
         self.assertEqual(self.server.server_address[0], "127.0.0.1")
         self.assertEqual(self.request("/", headers={"Host": "foreign.example"})[0], 403)
-        self.assertEqual(self.request("/", method="POST")[0], 501)
+        self.assertEqual(self.request("/", method="POST")[0], 403)
         status, _, body = self.request("/healthz", method="HEAD")
         self.assertEqual(status, 200)
         self.assertEqual(body, b"")
@@ -81,11 +81,12 @@ class Dashboard(unittest.TestCase):
         self.report.write_text("changed-after-start")
         self.assertNotEqual(self.request("/")[2], b"changed-after-start")
 
-    def test_launcher_default_is_synthetic_and_does_not_scan_agent_roots(self):
+    def test_explicit_demo_does_not_scan_agent_roots(self):
         # Execute the exact double-click launcher, with explicitly absent private roots.
         process = subprocess.Popen(
             [
                 str(ROOT / "start.command"),
+                "--demo",
                 "--port",
                 "0",
                 "--out",

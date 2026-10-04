@@ -194,6 +194,7 @@ def summarize(ledger, prices, as_of, since=None, until=None, k="latest", budget=
     agents = {}
     daily = {}
     models = {}
+    model_daily = {}
     for c in rows:
         quote, reason = prices.quote(c)
         for g in [
@@ -201,9 +202,14 @@ def summarize(ledger, prices, as_of, since=None, until=None, k="latest", budget=
             agents.setdefault(c.agent, new_group()),
             daily.setdefault((c.ts[:10], c.agent), new_group()),
             models.setdefault((c.agent, c.model), new_group()),
+            model_daily.setdefault((c.ts[:10], c.agent, c.model), new_group()),
         ]:
             add(g, c, quote, reason)
     data = {
+        "model_daily": [
+            dict(date=date, agent=agent, model=model, **finish(group))
+            for (date, agent, model), group in sorted(model_daily.items())
+        ],
         "version": __version__,
         "as_of": as_of,
         "period": {"since": since, "until": until, "timezone": "UTC"},

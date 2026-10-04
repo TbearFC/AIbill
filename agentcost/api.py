@@ -46,7 +46,11 @@ def discover_sources(agent="all", codex_homes=(), claude_home=None, inputs=()):
         if folder.is_dir():
             sources.extend(LogSource("claude", path) for path in sorted(folder.rglob("*.jsonl")))
     sources.extend(LogSource("generic", pathlib.Path(path).expanduser()) for path in inputs)
-    return sources
+    # Repeated or overlapping configured roots must not inflate source counts.
+    unique = {}
+    for source in sources:
+        unique.setdefault((source.adapter, source.path.resolve()), source)
+    return list(unique.values())
 
 
 def analyze_sources(sources: Iterable[LogSource], options: AnalysisOptions, prices=None):
@@ -84,6 +88,26 @@ def analyze_sources(sources: Iterable[LogSource], options: AnalysisOptions, pric
         inventory[source.adapter + "_files"] += 1
     ledger.finalize()
     data = summarize(ledger, prices, as_of, options.since, options.until, checkpoint, budget)
+    observations = {}
+    for agent, kinds in (
+        ("codex", {"provider_response", "cumulative_delta"}),
+        ("claude", {"assistant_message"}),
+    ):
+        rows = [
+            c
+            for c in ledger.rows(as_of)
+            if c.agent == agent
+            and c.source in kinds
+            and (not options.since or c.ts[:10] >= options.since)
+            and (not options.until or c.ts[:10] <= options.until)
+        ]
+        observations[agent] = {
+            "records": len(rows),
+            "tokens": sum(c.tokens for c in rows),
+            "first_observed_at": rows[0].ts if rows else None,
+            "last_observed_at": rows[-1].ts if rows else None,
+        }
+    data["log_observations"] = observations
     data["scan_status"] = "accepted_usage" if ledger.calls else "no_accepted_usage"
     data["source_inventory"] = inventory
     data["price_catalog_kind"] = (

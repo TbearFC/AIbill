@@ -31,3 +31,9 @@ dist/
 # User-specific price/contract configuration
 my-prices.json
 local-prices*.json
+
+# Local snapshots and directory settings, even when --out selects another folder.
+usage.json
+report.html
+sources.json
+.sources.tmp
