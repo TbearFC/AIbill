@@ -1,0 +1,33 @@
+# Local inputs, identities, and generated reports are never release inputs.
+reports/
+agentcost_reports/
+private-fixtures/
+private-data/
+local-data/
+*.jsonl
+!examples/events.jsonl
+*.log
+*.stdout.txt
+*.stderr.txt
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.codex/
+.claude/
+attachments/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.DS_Store
+.idea/
+.vscode/
+
+# User-specific price/contract configuration
+my-prices.json
+local-prices*.json

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentcost-cli"
+dynamic = ["version"]
+description = "Local agent usage analysis and experimental remaining-token priors"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+agentcost = "agentcost.__main__:main"
+
+[tool.setuptools]
+packages = ["agentcost"]
+
+[tool.setuptools.package-data]
+agentcost = ["prices.json", "dashboard.html"]
+
+[tool.setuptools.dynamic]
+version = {attr = "agentcost.__version__"}
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]

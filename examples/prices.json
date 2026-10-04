@@ -1,0 +1,39 @@
+{
+  "version": "synthetic-example-v1",
+  "basis": "Fictional example rates for tests and demos only. Supply a verified catalog with --prices for real usage.",
+  "synthetic_example": true,
+  "models": {
+    "example-openai-model": {
+      "usd_per_million": {
+        "input_uncached": 2,
+        "cache_read": 0.2,
+        "cache_write_5m": 2.5,
+        "cache_write_1h": null,
+        "output": 10
+      },
+      "long_context_threshold": 272000,
+      "long_context_multipliers": {
+        "input_uncached": 2,
+        "cache_read": 2,
+        "cache_write_5m": 2,
+        "output": 1.5
+      },
+      "tier_multipliers": {
+        "priority": 2,
+        "fast": 2,
+        "batch": 0.5,
+        "flex": 0.5
+      }
+    },
+    "example-anthropic-model": {
+      "usd_per_million": {
+        "input_uncached": 3,
+        "cache_read": 0.3,
+        "cache_write_5m": 3.75,
+        "cache_write_1h": 6,
+        "output": 15
+      }
+    }
+  },
+  "aliases": {}
+}
