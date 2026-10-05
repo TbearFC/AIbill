@@ -1,0 +1,29 @@
+{
+  "benchmark": "Terminal-Bench 4",
+  "model": "Claude Opus 5",
+  "baseline": "OpenHands",
+  "candidate": "PI",
+  "paired_tasks": 63,
+  "runs_per_config": 63,
+  "unmatched_baseline_tasks": 0,
+  "unmatched_candidate_tasks": 0,
+  "mean_cost_baseline": 12.933607503968254,
+  "mean_cost_candidate": 20.27750499206349,
+  "candidate_baseline_cost_ratio": 1.56781508839216,
+  "cost_ratio_task_bootstrap_95CI": [
+    1.1499821686660703,
+    2.1830786225553735
+  ],
+  "mean_quality_baseline": 0.5714285714285714,
+  "mean_quality_candidate": 0.30158730158730157,
+  "quality_difference_candidate_baseline": -0.2698412698412698,
+  "quality_difference_task_bootstrap_95CI": [
+    -0.4126984126984127,
+    -0.14285714285714285
+  ],
+  "quality_margin": 0.05,
+  "quality_margin_supported": false,
+  "sample_decision": "quality_regression_supported",
+  "method": "Equal weight per paired task; aggregate repeats before task bootstrap. Single comparison, no multiplicity correction.",
+  "limit": "Historical observed comparison; not a guarantee of production savings. Predeclare a candidate and margin before prospective testing."
+}

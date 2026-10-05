@@ -87,6 +87,20 @@ filesystem browser or remote log upload. Standalone exported reports work offlin
 refresh is available only through the local Python server. Public hosting is a
 separate step and cannot read someone else's local logs from a web browser.
 
+## Public-data research and configuration comparison
+
+The [2026-10-05 study](research/open-data-2026-10-05/README.md) adds a standalone
+cost/quality comparison CLI, reproducible public-data analysis, and an aggregate
+[research report](research/open-data-2026-10-05/research.html). It compares matched
+tasks, includes failed-run costs, reports uncertainty, and preserves the negative
+early-token-prediction result. It does not prove production savings or a multi-user
+forecasting advantage.
+
+No raw trajectories, completed user task records, or personal paths are bundled.
+Scientific dependencies are optional and confined to the research scripts;
+AIbill's runtime stays dependency-free. Source attribution, dataset restrictions,
+download sizes and reproduction steps are documented in the study directory.
+
 ## Real logs
 
 ```bash
@@ -170,9 +184,11 @@ generate HTML or write files. Pass a `Prices(path)` object to use a custom catal
 
 ## Privacy and release preparation
 
-This repository ships code, synthetic fixtures, and fictional pricing. It does not
+This repository ships code, synthetic runtime fixtures, fictional pricing, and
+explicitly attributed aggregate public-data research. It does not
 ship personal logs, machine details, prompts, attachments, usage snapshots, or research
-handoff documents. All example identifiers are artificial.
+handoff documents. Runtime example identifiers are artificial; public research
+configuration labels are retained from their credited sources.
 
 Generated aggregates can still reveal usage, model labels, activity times, and costs;
 they are not automatically anonymous. `.gitignore` excludes generated reports and

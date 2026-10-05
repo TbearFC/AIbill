@@ -1,0 +1,254 @@
+{
+  "status": "Exploratory descriptive domain transfer; three domains, not a second blind test. Point-estimate constraints, not statistical noninferiority.",
+  "rule": "Train two domains: equal mean reward, equal mean relative cost normalized by domain mean. Select lowest relative cost within 0.05 of best reward. Reference uses heldout outcomes and is hindsight-only.",
+  "rows": [
+    {
+      "model": "Claude Opus 5",
+      "heldout_benchmark": "ALE-CLI",
+      "selected": "OpenHands",
+      "hindsight_reference": "PI",
+      "selected_score": 0.5314034298836334,
+      "reference_score": 0.502233473839611,
+      "gap_to_best_score": 0.0,
+      "cost_ratio_to_reference": 1.5409701951879071
+    },
+    {
+      "model": "Claude Opus 5",
+      "heldout_benchmark": "TUA-Bench",
+      "selected": "OpenHands",
+      "hindsight_reference": "OpenHands",
+      "selected_score": 0.6522705528977502,
+      "reference_score": 0.6522705528977502,
+      "gap_to_best_score": 0.0015984411632207207,
+      "cost_ratio_to_reference": 1.0
+    },
+    {
+      "model": "Claude Opus 5",
+      "heldout_benchmark": "Terminal-Bench 4",
+      "selected": "PI",
+      "hindsight_reference": "OpenHands",
+      "selected_score": 0.30158730158730157,
+      "reference_score": 0.5714285714285714,
+      "gap_to_best_score": 0.2698412698412698,
+      "cost_ratio_to_reference": 1.56781508839216
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "heldout_benchmark": "ALE-CLI",
+      "selected": "DSH",
+      "hindsight_reference": "PI",
+      "selected_score": 0.40940274222166184,
+      "reference_score": 0.47718501880267916,
+      "gap_to_best_score": 0.10256094648969472,
+      "cost_ratio_to_reference": 1.6344895440316822
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "heldout_benchmark": "TUA-Bench",
+      "selected": "OpenHands",
+      "hindsight_reference": "openJiuwen",
+      "selected_score": 0.5648765285598287,
+      "reference_score": 0.6259320614115201,
+      "gap_to_best_score": 0.06105553285169141,
+      "cost_ratio_to_reference": 0.33359759178063053
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "heldout_benchmark": "Terminal-Bench 4",
+      "selected": "PI",
+      "hindsight_reference": "openJiuwen",
+      "selected_score": 0.06349206349206349,
+      "reference_score": 0.07936507936507936,
+      "gap_to_best_score": 0.031746031746031744,
+      "cost_ratio_to_reference": 1.2469896092303168
+    },
+    {
+      "model": "GLM-5.3",
+      "heldout_benchmark": "ALE-CLI",
+      "selected": "DSH",
+      "hindsight_reference": "PI",
+      "selected_score": 0.46128862243973395,
+      "reference_score": 0.4774654688581164,
+      "gap_to_best_score": 0.05552812946336155,
+      "cost_ratio_to_reference": 1.1637794233706047
+    },
+    {
+      "model": "GLM-5.3",
+      "heldout_benchmark": "TUA-Bench",
+      "selected": "DSH",
+      "hindsight_reference": "openJiuwen",
+      "selected_score": 0.5616181238060842,
+      "reference_score": 0.6301489343511152,
+      "gap_to_best_score": 0.06853081054503096,
+      "cost_ratio_to_reference": 1.2505107583421087
+    },
+    {
+      "model": "GLM-5.3",
+      "heldout_benchmark": "Terminal-Bench 4",
+      "selected": "openJiuwen",
+      "hindsight_reference": "DSH",
+      "selected_score": 0.4126984126984127,
+      "reference_score": 0.42857142857142855,
+      "gap_to_best_score": 0.015873015873015872,
+      "cost_ratio_to_reference": 1.7415197355768015
+    },
+    {
+      "model": "GPT-6 Astra",
+      "heldout_benchmark": "ALE-CLI",
+      "selected": "PI",
+      "hindsight_reference": "PI",
+      "selected_score": 0.5845620788564717,
+      "reference_score": 0.5845620788564717,
+      "gap_to_best_score": 0.0,
+      "cost_ratio_to_reference": 1.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "heldout_benchmark": "TUA-Bench",
+      "selected": "PI",
+      "hindsight_reference": "PI",
+      "selected_score": 0.6538438620517312,
+      "reference_score": 0.6538438620517312,
+      "gap_to_best_score": 0.009631298251470133,
+      "cost_ratio_to_reference": 1.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "heldout_benchmark": "Terminal-Bench 4",
+      "selected": "PI",
+      "hindsight_reference": "PI",
+      "selected_score": 0.6031746031746031,
+      "reference_score": 0.6031746031746031,
+      "gap_to_best_score": 0.0,
+      "cost_ratio_to_reference": 1.0
+    },
+    {
+      "model": "Kimi K3",
+      "heldout_benchmark": "ALE-CLI",
+      "selected": "openJiuwen",
+      "hindsight_reference": "openJiuwen",
+      "selected_score": 0.5493578777890412,
+      "reference_score": 0.5493578777890412,
+      "gap_to_best_score": 0.0,
+      "cost_ratio_to_reference": 1.0
+    },
+    {
+      "model": "Kimi K3",
+      "heldout_benchmark": "TUA-Bench",
+      "selected": "openJiuwen",
+      "hindsight_reference": "openJiuwen",
+      "selected_score": 0.6439352095794756,
+      "reference_score": 0.6439352095794756,
+      "gap_to_best_score": 0.0,
+      "cost_ratio_to_reference": 1.0
+    },
+    {
+      "model": "Kimi K3",
+      "heldout_benchmark": "Terminal-Bench 4",
+      "selected": "openJiuwen",
+      "hindsight_reference": "openJiuwen",
+      "selected_score": 0.2857142857142857,
+      "reference_score": 0.2857142857142857,
+      "gap_to_best_score": 0.0,
+      "cost_ratio_to_reference": 1.0
+    }
+  ],
+  "quality_margin_violations": 5,
+  "comparisons": 15,
+  "quality_only_control": {
+    "mean_quality_gap": 0.005462320319088562,
+    "maximum_quality_gap": 0.03379423670990844,
+    "rows": [
+      {
+        "model": "Claude Opus 5",
+        "heldout_benchmark": "ALE-CLI",
+        "selected": "OpenHands",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "Claude Opus 5",
+        "heldout_benchmark": "TUA-Bench",
+        "selected": "OpenHands",
+        "quality_gap": 0.0015984411632207207
+      },
+      {
+        "model": "Claude Opus 5",
+        "heldout_benchmark": "Terminal-Bench 4",
+        "selected": "OpenHands",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "DeepSeek V4 Pro",
+        "heldout_benchmark": "ALE-CLI",
+        "selected": "openJiuwen",
+        "quality_gap": 0.0036221747657584347
+      },
+      {
+        "model": "DeepSeek V4 Pro",
+        "heldout_benchmark": "TUA-Bench",
+        "selected": "openJiuwen",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "DeepSeek V4 Pro",
+        "heldout_benchmark": "Terminal-Bench 4",
+        "selected": "openJiuwen",
+        "quality_gap": 0.015873015873015872
+      },
+      {
+        "model": "GLM-5.3",
+        "heldout_benchmark": "ALE-CLI",
+        "selected": "openJiuwen",
+        "quality_gap": 0.03379423670990844
+      },
+      {
+        "model": "GLM-5.3",
+        "heldout_benchmark": "TUA-Bench",
+        "selected": "OpenHands",
+        "quality_gap": 0.0015426221499389436
+      },
+      {
+        "model": "GLM-5.3",
+        "heldout_benchmark": "Terminal-Bench 4",
+        "selected": "OpenHands",
+        "quality_gap": 0.015873015873015872
+      },
+      {
+        "model": "GPT-6 Astra",
+        "heldout_benchmark": "ALE-CLI",
+        "selected": "PI",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "GPT-6 Astra",
+        "heldout_benchmark": "TUA-Bench",
+        "selected": "PI",
+        "quality_gap": 0.009631298251470133
+      },
+      {
+        "model": "GPT-6 Astra",
+        "heldout_benchmark": "Terminal-Bench 4",
+        "selected": "PI",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "Kimi K3",
+        "heldout_benchmark": "ALE-CLI",
+        "selected": "openJiuwen",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "Kimi K3",
+        "heldout_benchmark": "TUA-Bench",
+        "selected": "openJiuwen",
+        "quality_gap": 0.0
+      },
+      {
+        "model": "Kimi K3",
+        "heldout_benchmark": "Terminal-Bench 4",
+        "selected": "openJiuwen",
+        "quality_gap": 0.0
+      }
+    ]
+  }
+}

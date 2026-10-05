@@ -1,0 +1,8 @@
+{
+  "task_clusters": 111,
+  "bootstrap_draws": 2000,
+  "median_ratio_task_bootstrap_95CI": [
+    2.142924407392373,
+    2.267070149583076
+  ]
+}

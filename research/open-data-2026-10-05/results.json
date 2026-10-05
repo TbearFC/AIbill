@@ -1,0 +1,3116 @@
+{
+  "swe_rebench": {
+    "audit": {
+      "rows": 9435,
+      "tasks": 111,
+      "configurations": 17,
+      "resolved": 4751,
+      "evaluation_mismatch": 0,
+      "cost_missing": 8331,
+      "token_total_missing": 6,
+      "token_total_zero": 0,
+      "status": {
+        "resolved": 4751,
+        "failed": 4683,
+        "skipped": 1
+      },
+      "exit_status": {
+        "submit": 7212,
+        "submitted": 2220,
+        "agent/agent_proxy/inference_server/prompt_too_long": 3
+      },
+      "per_config": [
+        {
+          "config": "claude-code",
+          "n": 555,
+          "missing_cost": 5,
+          "missing_tokens": 5,
+          "prefix_reached": 555
+        },
+        {
+          "config": "codex",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 539
+        },
+        {
+          "config": "cursor",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 554
+        },
+        {
+          "config": "deepseek-v4-pro",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "fable-5",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "glm-5.2",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "gpt-5.6-luna",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 497
+        },
+        {
+          "config": "gpt-5.6-sol",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 524
+        },
+        {
+          "config": "grok-4.5",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "junie",
+          "n": 555,
+          "missing_cost": 1,
+          "missing_tokens": 1,
+          "prefix_reached": 0
+        },
+        {
+          "config": "mimo-v2.5-pro",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "minimax-m3",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "opus-5",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "qwen3.5-35b-a3b",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "qwen3.6-27b",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "qwen3.6-35b-a3b",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        },
+        {
+          "config": "sonnet-5",
+          "n": 555,
+          "missing_cost": 555,
+          "missing_tokens": 0,
+          "prefix_reached": 555
+        }
+      ],
+      "common_valid": 7215,
+      "common_token_sum_match_fraction": 1.0
+    },
+    "variation": {
+      "five_run_cells": 1443,
+      "ratio_median": 2.1945992783250783,
+      "ratio_p90": 4.188350804733445,
+      "ratio_gt2_fraction": 0.6056826056826057,
+      "ratio_gt5_fraction": 0.06999306999306999,
+      "ratio_max": 21.37447708846368,
+      "min_usage_success_rate": 0.47124047124047125,
+      "max_usage_success_rate": 0.4878724878724879,
+      "within_config_top10_usage_share": 0.3141192959446349,
+      "failure_usage_share": 0.6064560183994867
+    },
+    "forecast": {
+      "population_rows": 7126,
+      "population_tasks": 111,
+      "excluded_before_tenth_result": 89,
+      "splits": {
+        "train": {
+          "rows": 4663,
+          "tasks": 73
+        },
+        "validation": {
+          "rows": 1230,
+          "tasks": 19
+        },
+        "test": {
+          "rows": 1233,
+          "tasks": 19
+        }
+      },
+      "M0_configuration_mean": {
+        "n": 1233,
+        "tasks": 19,
+        "WAPE": 0.6011245855967733,
+        "MAE_million_tokens": 2.5880480664227643,
+        "macro_WAPE": 0.5911153550113516,
+        "log1p_MAE": 0.45250544312004637
+      },
+      "M1_configuration_language": {
+        "n": 1233,
+        "tasks": 19,
+        "WAPE": 0.5861195308128987,
+        "MAE_million_tokens": 2.523446145372702,
+        "macro_WAPE": 0.6374861787298501,
+        "log1p_MAE": 0.457815052919623
+      },
+      "M2_prefix": {
+        "n": 1233,
+        "tasks": 19,
+        "WAPE": 0.6089162964165189,
+        "MAE_million_tokens": 2.6215940610540582,
+        "macro_WAPE": 0.6384935777716206,
+        "log1p_MAE": 0.4572275586080427
+      },
+      "M2_vs_M0": {
+        "relative_WAPE_improvement": -0.012961890108038832,
+        "task_bootstrap_95CI": [
+          -0.11264247915555017,
+          0.08105129417469469
+        ]
+      },
+      "M2_vs_M1": {
+        "relative_WAPE_improvement": -0.03889439679992068,
+        "task_bootstrap_95CI": [
+          -0.13690521331787886,
+          0.043540692395853925
+        ]
+      },
+      "feature_importance_impurity_diagnostic_not_causal": {
+        "p_input_chars": 0.5429272289526267,
+        "config=minimax-m3": 0.18379819950592227,
+        "p_result_chars": 0.06472117196915353,
+        "p_assistant_chars": 0.04683500466539808,
+        "language=python": 0.0218776377033553,
+        "config=gpt-5.6-luna": 0.019596890961228523,
+        "config=grok-4.5": 0.01935009896465576,
+        "config=qwen3.5-35b-a3b": 0.01329058239496672,
+        "p_tool_diversity": 0.012675533724108868,
+        "language=rust": 0.012219754557440106,
+        "config=fable-5": 0.012190590524682892,
+        "p_events": 0.011653785033608291,
+        "config=glm-5.2": 0.008414183827220539,
+        "config=gpt-5.6-sol": 0.006066822383445508,
+        "p_errors": 0.005148980805712314,
+        "p_tool_repeats": 0.0035190883217163203,
+        "language=typescript": 0.003270210268771507,
+        "language=go": 0.0029710750851792483,
+        "language=java": 0.0023933312254743803,
+        "p_calls": 0.001871585722882178,
+        "config=sonnet-5": 0.0016554127406987584,
+        "config=mimo-v2.5-pro": 0.0015024505990654028,
+        "config=qwen3.6-35b-a3b": 0.0005780574765884,
+        "config=qwen3.6-27b": 0.00045416871281458776,
+        "config=deepseek-v4-pro": 0.00039748290590223734,
+        "config=opus-5": 0.0003101918265194154,
+        "p_input_repeats": 0.00019653462280064428,
+        "p_truncated": 0.00011394451806161186
+      },
+      "risk_alert": {
+        "validation_cutoff": 0.7333298892145732,
+        "alerts": 154,
+        "alert_rate": 0.12489862124898621,
+        "high_usage_runs": 107,
+        "precision": 0.12987012987012986,
+        "recall": 0.18691588785046728,
+        "usage_share_flagged": 0.07994079933509125,
+        "flagged_success_rate": 0.44155844155844154,
+        "overall_success_rate": 0.5044606650446066,
+        "remaining_usage_or_savings": null
+      }
+    },
+    "configurations": [
+      {
+        "config": "deepseek-v4-pro",
+        "n": 555,
+        "score": 0.4018018018018018,
+        "mean_million_tokens": 3.955414174774775,
+        "median_million_tokens": 2.633827,
+        "p90_million_tokens": 8.093512
+      },
+      {
+        "config": "fable-5",
+        "n": 555,
+        "score": 0.645045045045045,
+        "mean_million_tokens": 2.5183080918918916,
+        "median_million_tokens": 1.650577,
+        "p90_million_tokens": 5.676060400000001
+      },
+      {
+        "config": "glm-5.2",
+        "n": 555,
+        "score": 0.6288288288288288,
+        "mean_million_tokens": 5.524892385585586,
+        "median_million_tokens": 3.763025,
+        "p90_million_tokens": 12.488464000000002
+      },
+      {
+        "config": "gpt-5.6-luna",
+        "n": 555,
+        "score": 0.436036036036036,
+        "mean_million_tokens": 0.3955216576576577,
+        "median_million_tokens": 0.339152,
+        "p90_million_tokens": 0.6948980000000001
+      },
+      {
+        "config": "gpt-5.6-sol",
+        "n": 555,
+        "score": 0.6234234234234234,
+        "mean_million_tokens": 0.6067386216216216,
+        "median_million_tokens": 0.489307,
+        "p90_million_tokens": 1.2221606000000007
+      },
+      {
+        "config": "grok-4.5",
+        "n": 555,
+        "score": 0.6378378378378379,
+        "mean_million_tokens": 2.4294238234234236,
+        "median_million_tokens": 1.702936,
+        "p90_million_tokens": 4.694085200000002
+      },
+      {
+        "config": "mimo-v2.5-pro",
+        "n": 555,
+        "score": 0.4648648648648649,
+        "mean_million_tokens": 4.694903866666667,
+        "median_million_tokens": 3.636408,
+        "p90_million_tokens": 9.053466800000002
+      },
+      {
+        "config": "minimax-m3",
+        "n": 555,
+        "score": 0.4720720720720721,
+        "mean_million_tokens": 13.869459315315316,
+        "median_million_tokens": 10.905567,
+        "p90_million_tokens": 29.226886600000004
+      },
+      {
+        "config": "opus-5",
+        "n": 555,
+        "score": 0.6342342342342342,
+        "mean_million_tokens": 4.322143001801802,
+        "median_million_tokens": 2.956941,
+        "p90_million_tokens": 9.7620366
+      },
+      {
+        "config": "qwen3.5-35b-a3b",
+        "n": 555,
+        "score": 0.17117117117117117,
+        "mean_million_tokens": 5.939226515315315,
+        "median_million_tokens": 4.680004,
+        "p90_million_tokens": 11.021896400000001
+      },
+      {
+        "config": "qwen3.6-27b",
+        "n": 555,
+        "score": 0.3117117117117117,
+        "mean_million_tokens": 3.0789695747747747,
+        "median_million_tokens": 2.386402,
+        "p90_million_tokens": 6.3247564
+      },
+      {
+        "config": "qwen3.6-35b-a3b",
+        "n": 555,
+        "score": 0.24684684684684685,
+        "mean_million_tokens": 3.7260609261261264,
+        "median_million_tokens": 2.74367,
+        "p90_million_tokens": 7.541568400000001
+      },
+      {
+        "config": "sonnet-5",
+        "n": 555,
+        "score": 0.5675675675675675,
+        "mean_million_tokens": 4.645616863063063,
+        "median_million_tokens": 3.015477,
+        "p90_million_tokens": 10.876425000000003
+      }
+    ]
+  },
+  "right_fit": {
+    "audit": {
+      "rows": 6204,
+      "configurations": 66,
+      "cost_missing": 118,
+      "no_trajectory": 137,
+      "unresolved_zero": 124,
+      "nonbinary_rewards": 1078,
+      "cached_exceeds_input": 0,
+      "negative_cost": 0,
+      "zero_cost": 119
+    },
+    "paired_comparisons": [
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "DSH",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.759686734848485,
+        "cost_b": 3.5575832272727275,
+        "cost_ratio_a_b": 1.6189886130264641,
+        "cost_ratio_95CI": [
+          1.283911826161935,
+          2.078576895182879
+        ],
+        "score_a": 0.5427783117227637,
+        "score_b": 0.43476622110498897,
+        "score_delta_a_b": 0.10801209061777471,
+        "paired_score_delta_95CI": [
+          0.032800035534297445,
+          0.18288379671511382
+        ],
+        "cost_per_reward_equivalent_a": 10.611490198581064,
+        "cost_per_reward_equivalent_b": 8.182749842503585
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.759686734848485,
+        "cost_b": 5.032975977272727,
+        "cost_ratio_a_b": 1.1443898720870807,
+        "cost_ratio_95CI": [
+          0.9972305545378001,
+          1.313108789634123
+        ],
+        "score_a": 0.5427783117227637,
+        "score_b": 0.5314034298836334,
+        "score_delta_a_b": 0.011374881839130274,
+        "paired_score_delta_95CI": [
+          -0.04319676059852836,
+          0.06605752104553027
+        ],
+        "cost_per_reward_equivalent_a": 10.611490198581064,
+        "cost_per_reward_equivalent_b": 9.471101792426982
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.759686734848485,
+        "cost_b": 3.2661085808080808,
+        "cost_ratio_a_b": 1.7634706845610928,
+        "cost_ratio_95CI": [
+          1.4494174712173362,
+          2.151016591322092
+        ],
+        "score_a": 0.5427783117227637,
+        "score_b": 0.502233473839611,
+        "score_delta_a_b": 0.040544837883152655,
+        "paired_score_delta_95CI": [
+          -0.015731885423460424,
+          0.09991036350207233
+        ],
+        "cost_per_reward_equivalent_a": 10.611490198581064,
+        "cost_per_reward_equivalent_b": 6.5031678510762045
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.759686734848485,
+        "cost_b": 4.893422866161616,
+        "cost_ratio_a_b": 1.177026161927911,
+        "cost_ratio_95CI": [
+          0.9870199275704821,
+          1.4371596832157192
+        ],
+        "score_a": 0.5427783117227637,
+        "score_b": 0.5126997694311068,
+        "score_delta_a_b": 0.03007854229165695,
+        "paired_score_delta_95CI": [
+          -0.027972190672606093,
+          0.09163910658401608
+        ],
+        "cost_per_reward_equivalent_a": 10.611490198581064,
+        "cost_per_reward_equivalent_b": 9.544421819403922
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 3.5575832272727275,
+        "cost_b": 5.032975977272727,
+        "cost_ratio_a_b": 0.706854799891279,
+        "cost_ratio_95CI": [
+          0.5472564336484589,
+          0.8913088290993839
+        ],
+        "score_a": 0.43476622110498897,
+        "score_b": 0.5314034298836334,
+        "score_delta_a_b": -0.09663720877864444,
+        "paired_score_delta_95CI": [
+          -0.17038325919821304,
+          -0.024516676113880517
+        ],
+        "cost_per_reward_equivalent_a": 8.182749842503585,
+        "cost_per_reward_equivalent_b": 9.471101792426982
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 3.5575832272727275,
+        "cost_b": 3.2661085808080808,
+        "cost_ratio_a_b": 1.0892421789579732,
+        "cost_ratio_95CI": [
+          0.8422709320742082,
+          1.3732144391607992
+        ],
+        "score_a": 0.43476622110498897,
+        "score_b": 0.502233473839611,
+        "score_delta_a_b": -0.06746725273462205,
+        "paired_score_delta_95CI": [
+          -0.1366428342753882,
+          -0.003003467109157294
+        ],
+        "cost_per_reward_equivalent_a": 8.182749842503585,
+        "cost_per_reward_equivalent_b": 6.5031678510762045
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 3.5575832272727275,
+        "cost_b": 4.893422866161616,
+        "cost_ratio_a_b": 0.7270132429947308,
+        "cost_ratio_95CI": [
+          0.5519180111779274,
+          0.9492926651847845
+        ],
+        "score_a": 0.43476622110498897,
+        "score_b": 0.5126997694311068,
+        "score_delta_a_b": -0.07793354832611778,
+        "paired_score_delta_95CI": [
+          -0.1469396926097879,
+          -0.013676431662573449
+        ],
+        "cost_per_reward_equivalent_a": 8.182749842503585,
+        "cost_per_reward_equivalent_b": 9.544421819403922
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.032975977272727,
+        "cost_b": 3.2661085808080808,
+        "cost_ratio_a_b": 1.5409701951879073,
+        "cost_ratio_95CI": [
+          1.2681284181872179,
+          1.887196826359928
+        ],
+        "score_a": 0.5314034298836334,
+        "score_b": 0.502233473839611,
+        "score_delta_a_b": 0.02916995604402239,
+        "paired_score_delta_95CI": [
+          -0.030296083534790963,
+          0.08685853927769306
+        ],
+        "cost_per_reward_equivalent_a": 9.471101792426982,
+        "cost_per_reward_equivalent_b": 6.5031678510762045
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.032975977272727,
+        "cost_b": 4.893422866161616,
+        "cost_ratio_a_b": 1.0285185063559765,
+        "cost_ratio_95CI": [
+          0.8327504742212871,
+          1.2809344921657173
+        ],
+        "score_a": 0.5314034298836334,
+        "score_b": 0.5126997694311068,
+        "score_delta_a_b": 0.01870366045252667,
+        "paired_score_delta_95CI": [
+          -0.05043584906338421,
+          0.08993151818150182
+        ],
+        "cost_per_reward_equivalent_a": 9.471101792426982,
+        "cost_per_reward_equivalent_b": 9.544421819403922
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Claude Opus 5",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 3.2661085808080808,
+        "cost_b": 4.893422866161616,
+        "cost_ratio_a_b": 0.6674486693952948,
+        "cost_ratio_95CI": [
+          0.5469469965076248,
+          0.808314304665435
+        ],
+        "score_a": 0.502233473839611,
+        "score_b": 0.5126997694311068,
+        "score_delta_a_b": -0.010466295591495717,
+        "paired_score_delta_95CI": [
+          -0.0828533082310185,
+          0.06229013562750656
+        ],
+        "cost_per_reward_equivalent_a": 6.5031678510762045,
+        "cost_per_reward_equivalent_b": 9.544421819403922
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.4248724142222222,
+        "cost_b": 0.49701035599999993,
+        "cost_ratio_a_b": 0.8548562602229203,
+        "cost_ratio_95CI": [
+          0.6505095227614184,
+          1.1080916840292676
+        ],
+        "score_a": 0.4094027422216618,
+        "score_b": 0.5119636887113566,
+        "score_delta_a_b": -0.10256094648969473,
+        "paired_score_delta_95CI": [
+          -0.16954000385311124,
+          -0.03600118962505324
+        ],
+        "cost_per_reward_equivalent_a": 1.0377859511067582,
+        "cost_per_reward_equivalent_b": 0.970792200616815
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.4248724142222222,
+        "cost_b": 0.25994195911111107,
+        "cost_ratio_a_b": 1.6344895440316825,
+        "cost_ratio_95CI": [
+          1.3099439362530019,
+          1.9944918610825741
+        ],
+        "score_a": 0.4094027422216618,
+        "score_b": 0.47718501880267916,
+        "score_delta_a_b": -0.06778227658101736,
+        "paired_score_delta_95CI": [
+          -0.14219813054599964,
+          0.003880670404122048
+        ],
+        "cost_per_reward_equivalent_a": 1.0377859511067582,
+        "cost_per_reward_equivalent_b": 0.5447404022937269
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.4248724142222222,
+        "cost_b": 0.6738210981414141,
+        "cost_ratio_a_b": 0.6305418684486704,
+        "cost_ratio_95CI": [
+          0.4996985483650884,
+          0.783820949894857
+        ],
+        "score_a": 0.4094027422216618,
+        "score_b": 0.5083415139455982,
+        "score_delta_a_b": -0.09893877172393636,
+        "paired_score_delta_95CI": [
+          -0.16790029537601828,
+          -0.033020961922246156
+        ],
+        "cost_per_reward_equivalent_a": 1.0377859511067582,
+        "cost_per_reward_equivalent_b": 1.3255283695234956
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "DeepSeek V4 Pro",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.49701035599999993,
+        "cost_b": 0.25994195911111107,
+        "cost_ratio_a_b": 1.9120051172175516,
+        "cost_ratio_95CI": [
+          1.491938729721312,
+          2.4508364097138067
+        ],
+        "score_a": 0.5119636887113566,
+        "score_b": 0.47718501880267916,
+        "score_delta_a_b": 0.03477866990867737,
+        "paired_score_delta_95CI": [
+          -0.0384246278325697,
+          0.10864116163434583
+        ],
+        "cost_per_reward_equivalent_a": 0.970792200616815,
+        "cost_per_reward_equivalent_b": 0.5447404022937269
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "DeepSeek V4 Pro",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.49701035599999993,
+        "cost_b": 0.6738210981414141,
+        "cost_ratio_a_b": 0.7375998723858493,
+        "cost_ratio_95CI": [
+          0.6022512100119047,
+          0.8872026593201334
+        ],
+        "score_a": 0.5119636887113566,
+        "score_b": 0.5083415139455982,
+        "score_delta_a_b": 0.0036221747657583596,
+        "paired_score_delta_95CI": [
+          -0.05757155507556859,
+          0.06448718232576933
+        ],
+        "cost_per_reward_equivalent_a": 0.970792200616815,
+        "cost_per_reward_equivalent_b": 1.3255283695234956
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "DeepSeek V4 Pro",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.25994195911111107,
+        "cost_b": 0.6738210981414141,
+        "cost_ratio_a_b": 0.385772959362809,
+        "cost_ratio_95CI": [
+          0.3141627552253838,
+          0.4681796025110552
+        ],
+        "score_a": 0.47718501880267916,
+        "score_b": 0.5083415139455982,
+        "score_delta_a_b": -0.031156495142919002,
+        "paired_score_delta_95CI": [
+          -0.10157461334038483,
+          0.03659200293567369
+        ],
+        "cost_per_reward_equivalent_a": 0.5447404022937269,
+        "cost_per_reward_equivalent_b": 1.3255283695234956
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.6235965486868689,
+        "cost_b": 2.0698177818181813,
+        "cost_ratio_a_b": 0.7844152093720345,
+        "cost_ratio_95CI": [
+          0.5297354886287385,
+          1.1459191338943375
+        ],
+        "score_a": 0.46128862243973395,
+        "score_b": 0.5168167519030955,
+        "score_delta_a_b": -0.05552812946336151,
+        "paired_score_delta_95CI": [
+          -0.11331209118479783,
+          0.0012546705394138756
+        ],
+        "cost_per_reward_equivalent_a": 3.519697798093832,
+        "cost_per_reward_equivalent_b": 4.0049355486183575
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.6235965486868689,
+        "cost_b": 1.3951067668686867,
+        "cost_ratio_a_b": 1.1637794233706047,
+        "cost_ratio_95CI": [
+          0.8633724689381314,
+          1.566895515272543
+        ],
+        "score_a": 0.46128862243973395,
+        "score_b": 0.4774654688581164,
+        "score_delta_a_b": -0.016176846418382414,
+        "paired_score_delta_95CI": [
+          -0.09255488666118476,
+          0.05370048917408107
+        ],
+        "cost_per_reward_equivalent_a": 3.519697798093832,
+        "cost_per_reward_equivalent_b": 2.9219008658472356
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.6235965486868689,
+        "cost_b": 1.9737969814141418,
+        "cost_ratio_a_b": 0.8225752516470214,
+        "cost_ratio_95CI": [
+          0.5978353590800477,
+          1.139822254769551
+        ],
+        "score_a": 0.46128862243973395,
+        "score_b": 0.48302251519318706,
+        "score_delta_a_b": -0.02173389275345307,
+        "paired_score_delta_95CI": [
+          -0.08570818700930982,
+          0.04420364719691888
+        ],
+        "cost_per_reward_equivalent_a": 3.519697798093832,
+        "cost_per_reward_equivalent_b": 4.086345707145169
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GLM-5.3",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.0698177818181813,
+        "cost_b": 1.3951067668686867,
+        "cost_ratio_a_b": 1.4836267954343607,
+        "cost_ratio_95CI": [
+          1.1185859497036756,
+          2.0308106603972025
+        ],
+        "score_a": 0.5168167519030955,
+        "score_b": 0.4774654688581164,
+        "score_delta_a_b": 0.0393512830449791,
+        "paired_score_delta_95CI": [
+          -0.02711188045680036,
+          0.10442184060095812
+        ],
+        "cost_per_reward_equivalent_a": 4.0049355486183575,
+        "cost_per_reward_equivalent_b": 2.9219008658472356
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GLM-5.3",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.0698177818181813,
+        "cost_b": 1.9737969814141418,
+        "cost_ratio_a_b": 1.0486477592722048,
+        "cost_ratio_95CI": [
+          0.7976603713784526,
+          1.361734553387189
+        ],
+        "score_a": 0.5168167519030955,
+        "score_b": 0.48302251519318706,
+        "score_delta_a_b": 0.033794236709908436,
+        "paired_score_delta_95CI": [
+          -0.0254001771316921,
+          0.09391715242698706
+        ],
+        "cost_per_reward_equivalent_a": 4.0049355486183575,
+        "cost_per_reward_equivalent_b": 4.086345707145169
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GLM-5.3",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.3951067668686867,
+        "cost_b": 1.9737969814141418,
+        "cost_ratio_a_b": 0.7068137098219452,
+        "cost_ratio_95CI": [
+          0.5245394273134509,
+          1.0062272480899423
+        ],
+        "score_a": 0.4774654688581164,
+        "score_b": 0.48302251519318706,
+        "score_delta_a_b": -0.005557046335070649,
+        "paired_score_delta_95CI": [
+          -0.07682558978144315,
+          0.06820251892846028
+        ],
+        "cost_per_reward_equivalent_a": 2.9219008658472356,
+        "cost_per_reward_equivalent_b": 4.086345707145169
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "DSH",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 4.867522691919191,
+        "cost_b": 6.792799782828283,
+        "cost_ratio_a_b": 0.7165709055968268,
+        "cost_ratio_95CI": [
+          0.5644929145519012,
+          0.9358146179821069
+        ],
+        "score_a": 0.5630303437034088,
+        "score_b": 0.4902343783539482,
+        "score_delta_a_b": 0.0727959653494605,
+        "paired_score_delta_95CI": [
+          0.008484768141841013,
+          0.14342662181331617
+        ],
+        "cost_per_reward_equivalent_a": 8.64522267113065,
+        "cost_per_reward_equivalent_b": 13.856228944278355
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 4.867522691919191,
+        "cost_b": 2.782932242424242,
+        "cost_ratio_a_b": 1.7490625958176544,
+        "cost_ratio_95CI": [
+          1.4347443891499783,
+          2.1733299492642404
+        ],
+        "score_a": 0.5630303437034088,
+        "score_b": 0.5385692102336708,
+        "score_delta_a_b": 0.024461133469737877,
+        "paired_score_delta_95CI": [
+          -0.03412190883623505,
+          0.084294645608502
+        ],
+        "cost_per_reward_equivalent_a": 8.64522267113065,
+        "cost_per_reward_equivalent_b": 5.167269479101493
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 4.867522691919191,
+        "cost_b": 2.6966953636363633,
+        "cost_ratio_a_b": 1.8049953871525082,
+        "cost_ratio_95CI": [
+          1.5914251467456328,
+          2.059447992570604
+        ],
+        "score_a": 0.5630303437034088,
+        "score_b": 0.5845620788564717,
+        "score_delta_a_b": -0.02153173515306301,
+        "paired_score_delta_95CI": [
+          -0.07692206676897445,
+          0.03341760839507671
+        ],
+        "cost_per_reward_equivalent_a": 8.64522267113065,
+        "cost_per_reward_equivalent_b": 4.613189019909871
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 4.867522691919191,
+        "cost_b": 5.1909197222222225,
+        "cost_ratio_a_b": 0.9376994737717529,
+        "cost_ratio_95CI": [
+          0.8501180139640475,
+          1.0397085151639969
+        ],
+        "score_a": 0.5630303437034088,
+        "score_b": 0.567078405055762,
+        "score_delta_a_b": -0.0040480613523533006,
+        "paired_score_delta_95CI": [
+          -0.05709730814655636,
+          0.043678275051858874
+        ],
+        "cost_per_reward_equivalent_a": 8.64522267113065,
+        "cost_per_reward_equivalent_b": 9.153795446877911
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 6.792799782828283,
+        "cost_b": 2.782932242424242,
+        "cost_ratio_a_b": 2.4408786097181445,
+        "cost_ratio_95CI": [
+          1.7870982739810848,
+          3.2064756902576232
+        ],
+        "score_a": 0.4902343783539482,
+        "score_b": 0.5385692102336708,
+        "score_delta_a_b": -0.04833483187972262,
+        "paired_score_delta_95CI": [
+          -0.11221969134294082,
+          0.012841957941781081
+        ],
+        "cost_per_reward_equivalent_a": 13.856228944278355,
+        "cost_per_reward_equivalent_b": 5.167269479101493
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 6.792799782828283,
+        "cost_b": 2.6966953636363633,
+        "cost_ratio_a_b": 2.51893479494418,
+        "cost_ratio_95CI": [
+          1.9632897482324025,
+          3.1325710559292466
+        ],
+        "score_a": 0.4902343783539482,
+        "score_b": 0.5845620788564717,
+        "score_delta_a_b": -0.09432770050252351,
+        "paired_score_delta_95CI": [
+          -0.15993591456252806,
+          -0.03018060588064179
+        ],
+        "cost_per_reward_equivalent_a": 13.856228944278355,
+        "cost_per_reward_equivalent_b": 4.613189019909871
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 6.792799782828283,
+        "cost_b": 5.1909197222222225,
+        "cost_ratio_a_b": 1.3085927246665836,
+        "cost_ratio_95CI": [
+          0.9806607480207561,
+          1.6937645607778753
+        ],
+        "score_a": 0.4902343783539482,
+        "score_b": 0.567078405055762,
+        "score_delta_a_b": -0.07684402670181381,
+        "paired_score_delta_95CI": [
+          -0.14463313950839063,
+          -0.01791430790975023
+        ],
+        "cost_per_reward_equivalent_a": 13.856228944278355,
+        "cost_per_reward_equivalent_b": 9.153795446877911
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.782932242424242,
+        "cost_b": 2.6966953636363633,
+        "cost_ratio_a_b": 1.0319787247572498,
+        "cost_ratio_95CI": [
+          0.8227147897721292,
+          1.2740685117050867
+        ],
+        "score_a": 0.5385692102336708,
+        "score_b": 0.5845620788564717,
+        "score_delta_a_b": -0.0459928686228009,
+        "paired_score_delta_95CI": [
+          -0.1049540816833714,
+          0.009844800811463576
+        ],
+        "cost_per_reward_equivalent_a": 5.167269479101493,
+        "cost_per_reward_equivalent_b": 4.613189019909871
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.782932242424242,
+        "cost_b": 5.1909197222222225,
+        "cost_ratio_a_b": 0.5361154460760712,
+        "cost_ratio_95CI": [
+          0.42331857183412497,
+          0.6644999898718481
+        ],
+        "score_a": 0.5385692102336708,
+        "score_b": 0.567078405055762,
+        "score_delta_a_b": -0.02850919482209119,
+        "paired_score_delta_95CI": [
+          -0.08966544082332953,
+          0.029803836581014702
+        ],
+        "cost_per_reward_equivalent_a": 5.167269479101493,
+        "cost_per_reward_equivalent_b": 9.153795446877911
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "GPT-6 Astra",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.6966953636363633,
+        "cost_b": 5.1909197222222225,
+        "cost_ratio_a_b": 0.5195024211397192,
+        "cost_ratio_95CI": [
+          0.45176718465295773,
+          0.5932486931613274
+        ],
+        "score_a": 0.5845620788564717,
+        "score_b": 0.567078405055762,
+        "score_delta_a_b": 0.017483673800709712,
+        "paired_score_delta_95CI": [
+          -0.021260799378368132,
+          0.06141103863093978
+        ],
+        "cost_per_reward_equivalent_a": 4.613189019909871,
+        "cost_per_reward_equivalent_b": 9.153795446877911
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.0653247727272726,
+        "cost_b": 2.192304760606061,
+        "cost_ratio_a_b": 0.48593826545939006,
+        "cost_ratio_95CI": [
+          0.2796870552778906,
+          0.8183247504089282
+        ],
+        "score_a": 0.4171611189934196,
+        "score_b": 0.38754465754522605,
+        "score_delta_a_b": 0.02961646144819351,
+        "paired_score_delta_95CI": [
+          -0.04249076581609887,
+          0.10292349047532431
+        ],
+        "cost_per_reward_equivalent_a": 2.5537489574719383,
+        "cost_per_reward_equivalent_b": 5.656908740511334
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.0653247727272726,
+        "cost_b": 1.529621142424243,
+        "cost_ratio_a_b": 0.6964631588700956,
+        "cost_ratio_95CI": [
+          0.5043656668890717,
+          0.9516822804084708
+        ],
+        "score_a": 0.4171611189934196,
+        "score_b": 0.48024546762965775,
+        "score_delta_a_b": -0.06308434863623825,
+        "paired_score_delta_95CI": [
+          -0.12530802988255002,
+          0.0002551101257792219
+        ],
+        "cost_per_reward_equivalent_a": 2.5537489574719383,
+        "cost_per_reward_equivalent_b": 3.1850818915043115
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.0653247727272726,
+        "cost_b": 2.1936445333333334,
+        "cost_ratio_a_b": 0.4856414777048985,
+        "cost_ratio_95CI": [
+          0.3641634829008835,
+          0.6228830823404665
+        ],
+        "score_a": 0.4171611189934196,
+        "score_b": 0.5493578777890411,
+        "score_delta_a_b": -0.13219675879562168,
+        "paired_score_delta_95CI": [
+          -0.21354493915975906,
+          -0.05605475135199631
+        ],
+        "cost_per_reward_equivalent_a": 2.5537489574719383,
+        "cost_per_reward_equivalent_b": 3.9931065376943855
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Kimi K3",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.192304760606061,
+        "cost_b": 1.529621142424243,
+        "cost_ratio_a_b": 1.4332338249009515,
+        "cost_ratio_95CI": [
+          1.0000796502537324,
+          2.01560398504131
+        ],
+        "score_a": 0.38754465754522605,
+        "score_b": 0.48024546762965775,
+        "score_delta_a_b": -0.09270081008443178,
+        "paired_score_delta_95CI": [
+          -0.1567209773045526,
+          -0.03299036411692386
+        ],
+        "cost_per_reward_equivalent_a": 5.656908740511334,
+        "cost_per_reward_equivalent_b": 3.1850818915043115
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Kimi K3",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 2.192304760606061,
+        "cost_b": 2.1936445333333334,
+        "cost_ratio_a_b": 0.9993892480267819,
+        "cost_ratio_95CI": [
+          0.6501751533659056,
+          1.63291285420594
+        ],
+        "score_a": 0.38754465754522605,
+        "score_b": 0.5493578777890411,
+        "score_delta_a_b": -0.16181322024381517,
+        "paired_score_delta_95CI": [
+          -0.23545269757402448,
+          -0.09141736666409005
+        ],
+        "cost_per_reward_equivalent_a": 5.656908740511334,
+        "cost_per_reward_equivalent_b": 3.9931065376943855
+      },
+      {
+        "benchmark": "ALE-CLI",
+        "model": "Kimi K3",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 99,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.529621142424243,
+        "cost_b": 2.1936445333333334,
+        "cost_ratio_a_b": 0.6972967220445331,
+        "cost_ratio_95CI": [
+          0.5803423823544244,
+          0.8422762730682753
+        ],
+        "score_a": 0.48024546762965775,
+        "score_b": 0.5493578777890411,
+        "score_delta_a_b": -0.06911241015938341,
+        "paired_score_delta_95CI": [
+          -0.13466026254813243,
+          -0.0039020847304783468
+        ],
+        "cost_per_reward_equivalent_a": 3.1850818915043115,
+        "cost_per_reward_equivalent_b": 3.9931065376943855
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "DSH",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.9135211791666668,
+        "cost_b": 0.76448338125,
+        "cost_ratio_a_b": 1.1949523057950278,
+        "cost_ratio_95CI": [
+          1.0072464197366862,
+          1.4031875339660358
+        ],
+        "score_a": 0.6888630278992665,
+        "score_b": 0.5883533183975461,
+        "score_delta_a_b": 0.10050970950172022,
+        "paired_score_delta_95CI": [
+          0.0456396808236703,
+          0.15879696875151245
+        ],
+        "cost_per_reward_equivalent_a": 1.326128914121738,
+        "cost_per_reward_equivalent_b": 1.2993610426676374
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "OpenHands",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.9135211791666668,
+        "cost_b": 0.7216776333333333,
+        "cost_ratio_a_b": 1.2658299730687697,
+        "cost_ratio_95CI": [
+          1.0783999497389016,
+          1.498378124802865
+        ],
+        "score_a": 0.6888630278992665,
+        "score_b": 0.6522705528977502,
+        "score_delta_a_b": 0.03659247500151623,
+        "paired_score_delta_95CI": [
+          -0.020745548012154804,
+          0.08866116473939879
+        ],
+        "cost_per_reward_equivalent_a": 1.326128914121738,
+        "cost_per_reward_equivalent_b": 1.1064084222831128
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.9135211791666668,
+        "cost_b": 0.5856714625,
+        "cost_ratio_a_b": 1.5597843461028575,
+        "cost_ratio_95CI": [
+          1.2036224755312828,
+          2.0264365715062866
+        ],
+        "score_a": 0.6888630278992665,
+        "score_b": 0.5821304899645099,
+        "score_delta_a_b": 0.1067325379347564,
+        "paired_score_delta_95CI": [
+          0.0516635270464396,
+          0.1664589601068687
+        ],
+        "cost_per_reward_equivalent_a": 1.326128914121738,
+        "cost_per_reward_equivalent_b": 1.0060827814322282
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.9135211791666668,
+        "cost_b": 1.3536974062499998,
+        "cost_ratio_a_b": 0.6748341061665286,
+        "cost_ratio_95CI": [
+          0.5919497092157854,
+          0.7620138014081497
+        ],
+        "score_a": 0.6888630278992665,
+        "score_b": 0.6538689940609709,
+        "score_delta_a_b": 0.03499403383829555,
+        "paired_score_delta_95CI": [
+          -0.016092954152025767,
+          0.08933024213456031
+        ],
+        "cost_per_reward_equivalent_a": 1.326128914121738,
+        "cost_per_reward_equivalent_b": 2.070288419462466
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.76448338125,
+        "cost_b": 0.7216776333333333,
+        "cost_ratio_a_b": 1.0593142227769379,
+        "cost_ratio_95CI": [
+          0.8658896930368479,
+          1.28294382973358
+        ],
+        "score_a": 0.5883533183975461,
+        "score_b": 0.6522705528977502,
+        "score_delta_a_b": -0.06391723450020398,
+        "paired_score_delta_95CI": [
+          -0.12469209585901304,
+          -0.005242855030812177
+        ],
+        "cost_per_reward_equivalent_a": 1.2993610426676374,
+        "cost_per_reward_equivalent_b": 1.1064084222831128
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.76448338125,
+        "cost_b": 0.5856714625,
+        "cost_ratio_a_b": 1.3053109639092242,
+        "cost_ratio_95CI": [
+          1.0071571077967727,
+          1.7722941489066204
+        ],
+        "score_a": 0.5883533183975461,
+        "score_b": 0.5821304899645099,
+        "score_delta_a_b": 0.00622282843303617,
+        "paired_score_delta_95CI": [
+          -0.057438530244963135,
+          0.0678090633703274
+        ],
+        "cost_per_reward_equivalent_a": 1.2993610426676374,
+        "cost_per_reward_equivalent_b": 1.0060827814322282
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.76448338125,
+        "cost_b": 1.3536974062499998,
+        "cost_ratio_a_b": 0.5647372726876717,
+        "cost_ratio_95CI": [
+          0.4820003672139903,
+          0.6579229709669163
+        ],
+        "score_a": 0.5883533183975461,
+        "score_b": 0.6538689940609709,
+        "score_delta_a_b": -0.06551567566342467,
+        "paired_score_delta_95CI": [
+          -0.12176586744638933,
+          -0.014930862227038518
+        ],
+        "cost_per_reward_equivalent_a": 1.2993610426676374,
+        "cost_per_reward_equivalent_b": 2.070288419462466
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.7216776333333333,
+        "cost_b": 0.5856714625,
+        "cost_ratio_a_b": 1.232222635968597,
+        "cost_ratio_95CI": [
+          0.9866963313195245,
+          1.5466989526168653
+        ],
+        "score_a": 0.6522705528977502,
+        "score_b": 0.5821304899645099,
+        "score_delta_a_b": 0.07014006293324017,
+        "paired_score_delta_95CI": [
+          0.01740118818921363,
+          0.12323472409727627
+        ],
+        "cost_per_reward_equivalent_a": 1.1064084222831128,
+        "cost_per_reward_equivalent_b": 1.0060827814322282
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.7216776333333333,
+        "cost_b": 1.3536974062499998,
+        "cost_ratio_a_b": 0.5331159164532332,
+        "cost_ratio_95CI": [
+          0.4531738089802358,
+          0.6156676828602432
+        ],
+        "score_a": 0.6522705528977502,
+        "score_b": 0.6538689940609709,
+        "score_delta_a_b": -0.0015984411632206856,
+        "paired_score_delta_95CI": [
+          -0.0630473905284964,
+          0.061509180907308066
+        ],
+        "cost_per_reward_equivalent_a": 1.1064084222831128,
+        "cost_per_reward_equivalent_b": 2.070288419462466
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Claude Opus 5",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.5856714625,
+        "cost_b": 1.3536974062499998,
+        "cost_ratio_a_b": 0.4326457743037432,
+        "cost_ratio_95CI": [
+          0.3302720474199346,
+          0.5435351551589727
+        ],
+        "score_a": 0.5821304899645099,
+        "score_b": 0.6538689940609709,
+        "score_delta_a_b": -0.07173850409646085,
+        "paired_score_delta_95CI": [
+          -0.1345809887940198,
+          -0.0072061172253207835
+        ],
+        "cost_per_reward_equivalent_a": 1.0060827814322282,
+        "cost_per_reward_equivalent_b": 2.070288419462466
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.10671560973333331,
+        "cost_b": 0.12101159143333332,
+        "cost_ratio_a_b": 0.8818627081036629,
+        "cost_ratio_95CI": [
+          0.7203579948485005,
+          1.0694978929725003
+        ],
+        "score_a": 0.5193448215285004,
+        "score_b": 0.5648765285598287,
+        "score_delta_a_b": -0.045531707031328285,
+        "paired_score_delta_95CI": [
+          -0.12678802732923725,
+          0.03724593538576882
+        ],
+        "cost_per_reward_equivalent_a": 0.20548122424568552,
+        "cost_per_reward_equivalent_b": 0.21422662354524863
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.10671560973333331,
+        "cost_b": 0.10056433566666663,
+        "cost_ratio_a_b": 1.0611675503635392,
+        "cost_ratio_95CI": [
+          0.8427384835104602,
+          1.388509273286406
+        ],
+        "score_a": 0.5193448215285004,
+        "score_b": 0.5758277440860083,
+        "score_delta_a_b": -0.056482922557507864,
+        "paired_score_delta_95CI": [
+          -0.14525236942032685,
+          0.03455055684963126
+        ],
+        "cost_per_reward_equivalent_a": 0.20548122424568552,
+        "cost_per_reward_equivalent_b": 0.17464308849218263
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.10671560973333331,
+        "cost_b": 0.36274719726666665,
+        "cost_ratio_a_b": 0.294187275704527,
+        "cost_ratio_95CI": [
+          0.24182773305023508,
+          0.35118858630012295
+        ],
+        "score_a": 0.5193448215285004,
+        "score_b": 0.62593206141152,
+        "score_delta_a_b": -0.10658723988301964,
+        "paired_score_delta_95CI": [
+          -0.18377113597757103,
+          -0.036470316567574546
+        ],
+        "cost_per_reward_equivalent_a": 0.20548122424568552,
+        "cost_per_reward_equivalent_b": 0.579531261665438
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "DeepSeek V4 Pro",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.12101159143333332,
+        "cost_b": 0.10056433566666663,
+        "cost_ratio_a_b": 1.2033251214868232,
+        "cost_ratio_95CI": [
+          0.9409376467605675,
+          1.588107144712104
+        ],
+        "score_a": 0.5648765285598287,
+        "score_b": 0.5758277440860083,
+        "score_delta_a_b": -0.010951215526179581,
+        "paired_score_delta_95CI": [
+          -0.09988817932901616,
+          0.08555455850262697
+        ],
+        "cost_per_reward_equivalent_a": 0.21422662354524863,
+        "cost_per_reward_equivalent_b": 0.17464308849218263
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "DeepSeek V4 Pro",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.12101159143333332,
+        "cost_b": 0.36274719726666665,
+        "cost_ratio_a_b": 0.33359759178063053,
+        "cost_ratio_95CI": [
+          0.2854095009517827,
+          0.38121225924814417
+        ],
+        "score_a": 0.5648765285598287,
+        "score_b": 0.62593206141152,
+        "score_delta_a_b": -0.061055532851691345,
+        "paired_score_delta_95CI": [
+          -0.14877899400399786,
+          0.021313911129065808
+        ],
+        "cost_per_reward_equivalent_a": 0.21422662354524863,
+        "cost_per_reward_equivalent_b": 0.579531261665438
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "DeepSeek V4 Pro",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.10056433566666663,
+        "cost_b": 0.36274719726666665,
+        "cost_ratio_a_b": 0.27722980749245785,
+        "cost_ratio_95CI": [
+          0.21550385866091412,
+          0.34720005293304884
+        ],
+        "score_a": 0.5758277440860083,
+        "score_b": 0.62593206141152,
+        "score_delta_a_b": -0.05010431732551177,
+        "paired_score_delta_95CI": [
+          -0.14284968751147442,
+          0.0499286287308114
+        ],
+        "cost_per_reward_equivalent_a": 0.17464308849218263,
+        "cost_per_reward_equivalent_b": 0.579531261665438
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.47054835233333336,
+        "cost_b": 0.43220371266666663,
+        "cost_ratio_a_b": 1.0887189039401883,
+        "cost_ratio_95CI": [
+          0.8172012154570645,
+          1.5382092950432131
+        ],
+        "score_a": 0.5616181238060842,
+        "score_b": 0.6286063122011762,
+        "score_delta_a_b": -0.066988188395092,
+        "paired_score_delta_95CI": [
+          -0.152834710092855,
+          0.01681089750793576
+        ],
+        "cost_per_reward_equivalent_a": 0.8378439590667565,
+        "cost_per_reward_equivalent_b": 0.6875586583806784
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.47054835233333336,
+        "cost_b": 0.24851748633333332,
+        "cost_ratio_a_b": 1.893421502349307,
+        "cost_ratio_95CI": [
+          1.5563191964890188,
+          2.3446284616359274
+        ],
+        "score_a": 0.5616181238060842,
+        "score_b": 0.5356500355272066,
+        "score_delta_a_b": 0.025968088278877605,
+        "paired_score_delta_95CI": [
+          -0.05864844450924411,
+          0.10519339443552828
+        ],
+        "cost_per_reward_equivalent_a": 0.8378439590667565,
+        "cost_per_reward_equivalent_b": 0.46395495164810957
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.47054835233333336,
+        "cost_b": 0.3762849293333333,
+        "cost_ratio_a_b": 1.2505107583421087,
+        "cost_ratio_95CI": [
+          1.025918525528913,
+          1.5126603462419046
+        ],
+        "score_a": 0.5616181238060842,
+        "score_b": 0.6301489343511152,
+        "score_delta_a_b": -0.06853081054503095,
+        "paired_score_delta_95CI": [
+          -0.138861601195848,
+          0.00025504410664630844
+        ],
+        "cost_per_reward_equivalent_a": 0.8378439590667565,
+        "cost_per_reward_equivalent_b": 0.597136500311321
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GLM-5.3",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.43220371266666663,
+        "cost_b": 0.24851748633333332,
+        "cost_ratio_a_b": 1.7391279746285433,
+        "cost_ratio_95CI": [
+          1.2232605761459927,
+          2.3492612145572638
+        ],
+        "score_a": 0.6286063122011762,
+        "score_b": 0.5356500355272066,
+        "score_delta_a_b": 0.09295627667396962,
+        "paired_score_delta_95CI": [
+          0.009047788604114754,
+          0.17412647110361854
+        ],
+        "cost_per_reward_equivalent_a": 0.6875586583806784,
+        "cost_per_reward_equivalent_b": 0.46395495164810957
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GLM-5.3",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.43220371266666663,
+        "cost_b": 0.3762849293333333,
+        "cost_ratio_a_b": 1.1486075550046744,
+        "cost_ratio_95CI": [
+          0.870333246898363,
+          1.4329211401164583
+        ],
+        "score_a": 0.6286063122011762,
+        "score_b": 0.6301489343511152,
+        "score_delta_a_b": -0.0015426221499389436,
+        "paired_score_delta_95CI": [
+          -0.07342662922943,
+          0.06823185281312061
+        ],
+        "cost_per_reward_equivalent_a": 0.6875586583806784,
+        "cost_per_reward_equivalent_b": 0.597136500311321
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GLM-5.3",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.24851748633333332,
+        "cost_b": 0.3762849293333333,
+        "cost_ratio_a_b": 0.6604502783931143,
+        "cost_ratio_95CI": [
+          0.5269567023800509,
+          0.8096956543644147
+        ],
+        "score_a": 0.5356500355272066,
+        "score_b": 0.6301489343511152,
+        "score_delta_a_b": -0.09449889882390856,
+        "paired_score_delta_95CI": [
+          -0.1787566386280317,
+          -0.015496350181771762
+        ],
+        "cost_per_reward_equivalent_a": 0.46395495164810957,
+        "cost_per_reward_equivalent_b": 0.597136500311321
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "DSH",
+        "common_tasks": 3,
+        "excluded_missing_cost": 117,
+        "cost_a": 0.9788936666666667,
+        "cost_b": 0.6817641666666666,
+        "cost_ratio_a_b": 1.4358244603155783,
+        "cost_ratio_95CI": [
+          1.2493315510766432,
+          2.300469499189774
+        ],
+        "score_a": 0.6666666666666666,
+        "score_b": 0.3333333333333333,
+        "score_delta_a_b": 0.3333333333333333,
+        "paired_score_delta_95CI": [
+          0.0,
+          1.0
+        ],
+        "cost_per_reward_equivalent_a": 1.4683405,
+        "cost_per_reward_equivalent_b": 2.0452925
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "OpenHands",
+        "common_tasks": 3,
+        "excluded_missing_cost": 117,
+        "cost_a": 0.9788936666666667,
+        "cost_b": 1.083651,
+        "cost_ratio_a_b": 0.9033292699094698,
+        "cost_ratio_95CI": [
+          0.654967272799297,
+          1.5768038662503618
+        ],
+        "score_a": 0.6666666666666666,
+        "score_b": 0.6666666666666666,
+        "score_delta_a_b": 0.0,
+        "paired_score_delta_95CI": [
+          0.0,
+          0.0
+        ],
+        "cost_per_reward_equivalent_a": 1.4683405,
+        "cost_per_reward_equivalent_b": 1.6254764999999998
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "PI",
+        "common_tasks": 3,
+        "excluded_missing_cost": 117,
+        "cost_a": 0.9788936666666667,
+        "cost_b": 0.45744549999999995,
+        "cost_ratio_a_b": 2.139913206418397,
+        "cost_ratio_95CI": [
+          1.9207813272436047,
+          4.351969936360259
+        ],
+        "score_a": 0.6666666666666666,
+        "score_b": 0.6666666666666666,
+        "score_delta_a_b": 0.0,
+        "paired_score_delta_95CI": [
+          0.0,
+          0.0
+        ],
+        "cost_per_reward_equivalent_a": 1.4683405,
+        "cost_per_reward_equivalent_b": 0.6861682499999999
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "openJiuwen",
+        "common_tasks": 3,
+        "excluded_missing_cost": 117,
+        "cost_a": 0.9788936666666667,
+        "cost_b": 1.4074408333333333,
+        "cost_ratio_a_b": 0.6955131920880038,
+        "cost_ratio_95CI": [
+          0.5480193789662754,
+          1.1722454905290838
+        ],
+        "score_a": 0.6666666666666666,
+        "score_b": 0.3333333333333333,
+        "score_delta_a_b": 0.3333333333333333,
+        "paired_score_delta_95CI": [
+          0.0,
+          1.0
+        ],
+        "cost_per_reward_equivalent_a": 1.4683405,
+        "cost_per_reward_equivalent_b": 4.2223225
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.2580918416666667,
+        "cost_b": 0.7169291999999998,
+        "cost_ratio_a_b": 1.7548341477326728,
+        "cost_ratio_95CI": [
+          1.202353950729953,
+          2.4947106280823905
+        ],
+        "score_a": 0.6431938599789256,
+        "score_b": 0.6101287786102219,
+        "score_delta_a_b": 0.03306508136870376,
+        "paired_score_delta_95CI": [
+          -0.032571723687347315,
+          0.0986124234854942
+        ],
+        "cost_per_reward_equivalent_a": 1.9560072319531911,
+        "cost_per_reward_equivalent_b": 1.175045703684151
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.2580918416666667,
+        "cost_b": 0.6409863916666666,
+        "cost_ratio_a_b": 1.9627434498186893,
+        "cost_ratio_95CI": [
+          1.2829857391931452,
+          2.7198636916751346
+        ],
+        "score_a": 0.6431938599789256,
+        "score_b": 0.6538438620517312,
+        "score_delta_a_b": -0.010650002072805555,
+        "paired_score_delta_95CI": [
+          -0.0637242401104505,
+          0.03947207254391011
+        ],
+        "cost_per_reward_equivalent_a": 1.9560072319531911,
+        "cost_per_reward_equivalent_b": 0.9803355646029643
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.2580918416666667,
+        "cost_b": 1.3134665041666667,
+        "cost_ratio_a_b": 0.9578408262987014,
+        "cost_ratio_95CI": [
+          0.6616075635988915,
+          1.347697878538882
+        ],
+        "score_a": 0.6431938599789256,
+        "score_b": 0.6634751603032014,
+        "score_delta_a_b": -0.02028130032427567,
+        "paired_score_delta_95CI": [
+          -0.07614358793589364,
+          0.029698137123309574
+        ],
+        "cost_per_reward_equivalent_a": 1.9560072319531911,
+        "cost_per_reward_equivalent_b": 1.9796769837870432
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.7169291999999998,
+        "cost_b": 0.6409863916666666,
+        "cost_ratio_a_b": 1.1184780352916228,
+        "cost_ratio_95CI": [
+          0.8414082082914636,
+          1.404041367140034
+        ],
+        "score_a": 0.6101287786102219,
+        "score_b": 0.6538438620517312,
+        "score_delta_a_b": -0.04371508344150931,
+        "paired_score_delta_95CI": [
+          -0.10503221422831018,
+          0.013829692483316088
+        ],
+        "cost_per_reward_equivalent_a": 1.175045703684151,
+        "cost_per_reward_equivalent_b": 0.9803355646029643
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.7169291999999998,
+        "cost_b": 1.3134665041666667,
+        "cost_ratio_a_b": 0.5458298310049848,
+        "cost_ratio_95CI": [
+          0.473321057311727,
+          0.6299607550539302
+        ],
+        "score_a": 0.6101287786102219,
+        "score_b": 0.6634751603032014,
+        "score_delta_a_b": -0.05334638169297943,
+        "paired_score_delta_95CI": [
+          -0.10597350250532281,
+          -0.004498995242529781
+        ],
+        "cost_per_reward_equivalent_a": 1.175045703684151,
+        "cost_per_reward_equivalent_b": 1.9796769837870432
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "GPT-6 Astra",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.6409863916666666,
+        "cost_b": 1.3134665041666667,
+        "cost_ratio_a_b": 0.4880112204104836,
+        "cost_ratio_95CI": [
+          0.3937704195456654,
+          0.6310144266141986
+        ],
+        "score_a": 0.6538438620517312,
+        "score_b": 0.6634751603032014,
+        "score_delta_a_b": -0.009631298251470117,
+        "paired_score_delta_95CI": [
+          -0.0673270905112862,
+          0.04745467744864862
+        ],
+        "cost_per_reward_equivalent_a": 0.9803355646029643,
+        "cost_per_reward_equivalent_b": 1.9796769837870432
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.39856966999999993,
+        "cost_b": 0.39038645499999997,
+        "cost_ratio_a_b": 1.0209618312705033,
+        "cost_ratio_95CI": [
+          0.6471621093592927,
+          1.6505916956809379
+        ],
+        "score_a": 0.5838113574953667,
+        "score_b": 0.5053815986802002,
+        "score_delta_a_b": 0.07842975881516649,
+        "paired_score_delta_95CI": [
+          -0.01801227732031987,
+          0.17591713515909727
+        ],
+        "cost_per_reward_equivalent_a": 0.6827028369402065,
+        "cost_per_reward_equivalent_b": 0.7724587836587065
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.39856966999999993,
+        "cost_b": 0.27925422779166664,
+        "cost_ratio_a_b": 1.42726458665237,
+        "cost_ratio_95CI": [
+          0.9843045303192703,
+          2.062736622778276
+        ],
+        "score_a": 0.5838113574953667,
+        "score_b": 0.5878089353020356,
+        "score_delta_a_b": -0.0039975778066688354,
+        "paired_score_delta_95CI": [
+          -0.08852776510079081,
+          0.08085944063569016
+        ],
+        "cost_per_reward_equivalent_a": 0.6827028369402065,
+        "cost_per_reward_equivalent_b": 0.4750765274573049
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.39856966999999993,
+        "cost_b": 0.472241345,
+        "cost_ratio_a_b": 0.843995711557191,
+        "cost_ratio_95CI": [
+          0.6032243067116769,
+          1.2000499302761551
+        ],
+        "score_a": 0.5838113574953667,
+        "score_b": 0.6439352095794756,
+        "score_delta_a_b": -0.06012385208410883,
+        "paired_score_delta_95CI": [
+          -0.13913099561702455,
+          0.015125146892299242
+        ],
+        "cost_per_reward_equivalent_a": 0.6827028369402065,
+        "cost_per_reward_equivalent_b": 0.73336779535382
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Kimi K3",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.39038645499999997,
+        "cost_b": 0.27925422779166664,
+        "cost_ratio_a_b": 1.3979607688920714,
+        "cost_ratio_95CI": [
+          1.103768998503175,
+          1.872299248858392
+        ],
+        "score_a": 0.5053815986802002,
+        "score_b": 0.5878089353020356,
+        "score_delta_a_b": -0.08242733662183532,
+        "paired_score_delta_95CI": [
+          -0.16729134325119727,
+          0.00559656144113034
+        ],
+        "cost_per_reward_equivalent_a": 0.7724587836587065,
+        "cost_per_reward_equivalent_b": 0.4750765274573049
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Kimi K3",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.39038645499999997,
+        "cost_b": 0.472241345,
+        "cost_ratio_a_b": 0.8266672521017828,
+        "cost_ratio_95CI": [
+          0.6599939269878307,
+          1.0245914131501517
+        ],
+        "score_a": 0.5053815986802002,
+        "score_b": 0.6439352095794756,
+        "score_delta_a_b": -0.13855361089927534,
+        "paired_score_delta_95CI": [
+          -0.22460089092459376,
+          -0.05401723094146243
+        ],
+        "cost_per_reward_equivalent_a": 0.7724587836587065,
+        "cost_per_reward_equivalent_b": 0.73336779535382
+      },
+      {
+        "benchmark": "TUA-Bench",
+        "model": "Kimi K3",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 120,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.27925422779166664,
+        "cost_b": 0.472241345,
+        "cost_ratio_a_b": 0.591337947742942,
+        "cost_ratio_95CI": [
+          0.4602253744878982,
+          0.7525290018263818
+        ],
+        "score_a": 0.5878089353020356,
+        "score_b": 0.6439352095794756,
+        "score_delta_a_b": -0.05612627427743998,
+        "paired_score_delta_95CI": [
+          -0.14015961426988302,
+          0.029752690266345316
+        ],
+        "cost_per_reward_equivalent_a": 0.4750765274573049,
+        "cost_per_reward_equivalent_b": 0.73336779535382
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "DSH",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 12.38329622222222,
+        "cost_b": 17.816169146825395,
+        "cost_ratio_a_b": 0.6950594215944991,
+        "cost_ratio_95CI": [
+          0.5125479533599937,
+          0.9264258826461693
+        ],
+        "score_a": 0.49206349206349204,
+        "score_b": 0.3492063492063492,
+        "score_delta_a_b": 0.14285714285714285,
+        "paired_score_delta_95CI": [
+          0.0,
+          0.2857142857142857
+        ],
+        "cost_per_reward_equivalent_a": 25.16605361290322,
+        "cost_per_reward_equivalent_b": 51.01902982954545
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "OpenHands",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 12.38329622222222,
+        "cost_b": 12.933607503968254,
+        "cost_ratio_a_b": 0.9574510606126566,
+        "cost_ratio_95CI": [
+          0.6898417320930958,
+          1.384238095869641
+        ],
+        "score_a": 0.49206349206349204,
+        "score_b": 0.5714285714285714,
+        "score_delta_a_b": -0.07936507936507936,
+        "paired_score_delta_95CI": [
+          -0.20634920634920634,
+          0.047619047619047616
+        ],
+        "cost_per_reward_equivalent_a": 25.16605361290322,
+        "cost_per_reward_equivalent_b": 22.633813131944446
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 12.38329622222222,
+        "cost_b": 20.277504992063488,
+        "cost_ratio_a_b": 0.6106913166619354,
+        "cost_ratio_95CI": [
+          0.4912135566219981,
+          0.757102044345398
+        ],
+        "score_a": 0.49206349206349204,
+        "score_b": 0.30158730158730157,
+        "score_delta_a_b": 0.19047619047619047,
+        "paired_score_delta_95CI": [
+          0.07936507936507936,
+          0.30158730158730157
+        ],
+        "cost_per_reward_equivalent_a": 25.16605361290322,
+        "cost_per_reward_equivalent_b": 67.23593760526315
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "Claude Code",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 12.38329622222222,
+        "cost_b": 19.696192960317465,
+        "cost_ratio_a_b": 0.6287152165482555,
+        "cost_ratio_95CI": [
+          0.5287323936623158,
+          0.7300661039969254
+        ],
+        "score_a": 0.49206349206349204,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": 0.07936507936507936,
+        "paired_score_delta_95CI": [
+          -0.047619047619047616,
+          0.20634920634920634
+        ],
+        "cost_per_reward_equivalent_a": 25.16605361290322,
+        "cost_per_reward_equivalent_b": 47.7253906346154
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 17.816169146825395,
+        "cost_b": 12.933607503968254,
+        "cost_ratio_a_b": 1.3775096500616002,
+        "cost_ratio_95CI": [
+          0.9288285942334356,
+          2.05138682057677
+        ],
+        "score_a": 0.3492063492063492,
+        "score_b": 0.5714285714285714,
+        "score_delta_a_b": -0.2222222222222222,
+        "paired_score_delta_95CI": [
+          -0.36507936507936506,
+          -0.07936507936507936
+        ],
+        "cost_per_reward_equivalent_a": 51.01902982954545,
+        "cost_per_reward_equivalent_b": 22.633813131944446
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 17.816169146825395,
+        "cost_b": 20.277504992063488,
+        "cost_ratio_a_b": 0.8786174213148291,
+        "cost_ratio_95CI": [
+          0.6385138963092786,
+          1.1853394215913455
+        ],
+        "score_a": 0.3492063492063492,
+        "score_b": 0.30158730158730157,
+        "score_delta_a_b": 0.047619047619047616,
+        "paired_score_delta_95CI": [
+          -0.047619047619047616,
+          0.14285714285714285
+        ],
+        "cost_per_reward_equivalent_a": 51.01902982954545,
+        "cost_per_reward_equivalent_b": 67.23593760526315
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 17.816169146825395,
+        "cost_b": 19.696192960317465,
+        "cost_ratio_a_b": 0.9045488731106659,
+        "cost_ratio_95CI": [
+          0.6883524283279667,
+          1.1986954655807607
+        ],
+        "score_a": 0.3492063492063492,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": -0.06349206349206349,
+        "paired_score_delta_95CI": [
+          -0.20634920634920634,
+          0.06349206349206349
+        ],
+        "cost_per_reward_equivalent_a": 51.01902982954545,
+        "cost_per_reward_equivalent_b": 47.7253906346154
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 12.933607503968254,
+        "cost_b": 20.277504992063488,
+        "cost_ratio_a_b": 0.6378303202997806,
+        "cost_ratio_95CI": [
+          0.458335987887686,
+          0.8550779589498088
+        ],
+        "score_a": 0.5714285714285714,
+        "score_b": 0.30158730158730157,
+        "score_delta_a_b": 0.2698412698412698,
+        "paired_score_delta_95CI": [
+          0.14285714285714285,
+          0.3968253968253968
+        ],
+        "cost_per_reward_equivalent_a": 22.633813131944446,
+        "cost_per_reward_equivalent_b": 67.23593760526315
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 12.933607503968254,
+        "cost_b": 19.696192960317465,
+        "cost_ratio_a_b": 0.6566551988003975,
+        "cost_ratio_95CI": [
+          0.46476844676096796,
+          0.8835121375566429
+        ],
+        "score_a": 0.5714285714285714,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": 0.15873015873015872,
+        "paired_score_delta_95CI": [
+          0.015873015873015872,
+          0.30158730158730157
+        ],
+        "cost_per_reward_equivalent_a": 22.633813131944446,
+        "cost_per_reward_equivalent_b": 47.7253906346154
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Claude Opus 5",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 20.277504992063488,
+        "cost_b": 19.696192960317465,
+        "cost_ratio_a_b": 1.0295139285504162,
+        "cost_ratio_95CI": [
+          0.8544254822057055,
+          1.285388134509629
+        ],
+        "score_a": 0.30158730158730157,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": -0.1111111111111111,
+        "paired_score_delta_95CI": [
+          -0.23809523809523808,
+          0.016269841269839103
+        ],
+        "cost_per_reward_equivalent_a": 67.23593760526315,
+        "cost_per_reward_equivalent_b": 47.7253906346154
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.30847378584127,
+        "cost_b": 0.8030027559365078,
+        "cost_ratio_a_b": 1.629476083572407,
+        "cost_ratio_95CI": [
+          1.1349539671426396,
+          2.248788879682321
+        ],
+        "score_a": 0.09523809523809523,
+        "score_b": 0.031746031746031744,
+        "score_delta_a_b": 0.06349206349206349,
+        "paired_score_delta_95CI": [
+          0.0,
+          0.14285714285714285
+        ],
+        "cost_per_reward_equivalent_a": 13.738974751333336,
+        "cost_per_reward_equivalent_b": 25.294586811999995
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.30847378584127,
+        "cost_b": 1.4654641898888887,
+        "cost_ratio_a_b": 0.8928732580906521,
+        "cost_ratio_95CI": [
+          0.662649883874038,
+          1.1837486927472327
+        ],
+        "score_a": 0.09523809523809523,
+        "score_b": 0.06349206349206349,
+        "score_delta_a_b": 0.031746031746031744,
+        "paired_score_delta_95CI": [
+          -0.047619047619047616,
+          0.1111111111111111
+        ],
+        "cost_per_reward_equivalent_a": 13.738974751333336,
+        "cost_per_reward_equivalent_b": 23.081060990749997
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "DeepSeek V4 Pro",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.30847378584127,
+        "cost_b": 1.1752016047619047,
+        "cost_ratio_a_b": 1.113403675198662,
+        "cost_ratio_95CI": [
+          0.7546191232276634,
+          1.5451113574961122
+        ],
+        "score_a": 0.09523809523809523,
+        "score_b": 0.07936507936507936,
+        "score_delta_a_b": 0.015873015873015872,
+        "paired_score_delta_95CI": [
+          -0.047619047619047616,
+          0.07936507936507936
+        ],
+        "cost_per_reward_equivalent_a": 13.738974751333336,
+        "cost_per_reward_equivalent_b": 14.807540219999998
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "DeepSeek V4 Pro",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.8030027559365078,
+        "cost_b": 1.4654641898888887,
+        "cost_ratio_a_b": 0.5479511280295367,
+        "cost_ratio_95CI": [
+          0.44406868568082886,
+          0.6727050234366286
+        ],
+        "score_a": 0.031746031746031744,
+        "score_b": 0.06349206349206349,
+        "score_delta_a_b": -0.031746031746031744,
+        "paired_score_delta_95CI": [
+          -0.1111111111111111,
+          0.047619047619047616
+        ],
+        "cost_per_reward_equivalent_a": 25.294586811999995,
+        "cost_per_reward_equivalent_b": 23.081060990749997
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "DeepSeek V4 Pro",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 0.8030027559365078,
+        "cost_b": 1.1752016047619047,
+        "cost_ratio_a_b": 0.6832893630188633,
+        "cost_ratio_95CI": [
+          0.5582895865823023,
+          0.8431923562587856
+        ],
+        "score_a": 0.031746031746031744,
+        "score_b": 0.07936507936507936,
+        "score_delta_a_b": -0.047619047619047616,
+        "paired_score_delta_95CI": [
+          -0.12698412698412698,
+          0.031746031746031744
+        ],
+        "cost_per_reward_equivalent_a": 25.294586811999995,
+        "cost_per_reward_equivalent_b": 14.807540219999998
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "DeepSeek V4 Pro",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 1.4654641898888887,
+        "cost_b": 1.1752016047619047,
+        "cost_ratio_a_b": 1.2469896092303168,
+        "cost_ratio_95CI": [
+          0.9614492018129572,
+          1.5817043158096558
+        ],
+        "score_a": 0.06349206349206349,
+        "score_b": 0.07936507936507936,
+        "score_delta_a_b": -0.015873015873015872,
+        "paired_score_delta_95CI": [
+          -0.07936507936507936,
+          0.047619047619047616
+        ],
+        "cost_per_reward_equivalent_a": 23.081060990749997,
+        "cost_per_reward_equivalent_b": 14.807540219999998
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 6.532547313015873,
+        "cost_b": 7.389382010793652,
+        "cost_ratio_a_b": 0.8840451479533468,
+        "cost_ratio_95CI": [
+          0.716480724114305,
+          1.050884884753692
+        ],
+        "score_a": 0.42857142857142855,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": 0.015873015873015872,
+        "paired_score_delta_95CI": [
+          -0.09523809523809523,
+          0.12698412698412698
+        ],
+        "cost_per_reward_equivalent_a": 15.242610397037037,
+        "cost_per_reward_equivalent_b": 17.905041026153846
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 6.532547313015873,
+        "cost_b": 5.975408523174605,
+        "cost_ratio_a_b": 1.093238610829787,
+        "cost_ratio_95CI": [
+          0.8257083314027543,
+          1.509167929335746
+        ],
+        "score_a": 0.42857142857142855,
+        "score_b": 0.31746031746031744,
+        "score_delta_a_b": 0.1111111111111111,
+        "paired_score_delta_95CI": [
+          0.0,
+          0.23809523809523808
+        ],
+        "cost_per_reward_equivalent_a": 15.242610397037037,
+        "cost_per_reward_equivalent_b": 18.822536848000006
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GLM-5.3",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 6.532547313015873,
+        "cost_b": 11.376560069206352,
+        "cost_ratio_a_b": 0.5742111212244136,
+        "cost_ratio_95CI": [
+          0.4075812877645605,
+          0.7982918665668837
+        ],
+        "score_a": 0.42857142857142855,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": 0.015873015873015872,
+        "paired_score_delta_95CI": [
+          -0.09523809523809523,
+          0.12698412698412698
+        ],
+        "cost_per_reward_equivalent_a": 15.242610397037037,
+        "cost_per_reward_equivalent_b": 27.566280167692316
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GLM-5.3",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 7.389382010793652,
+        "cost_b": 5.975408523174605,
+        "cost_ratio_a_b": 1.2366321034177314,
+        "cost_ratio_95CI": [
+          0.991533827843137,
+          1.6565354597184592
+        ],
+        "score_a": 0.4126984126984127,
+        "score_b": 0.31746031746031744,
+        "score_delta_a_b": 0.09523809523809523,
+        "paired_score_delta_95CI": [
+          -0.015873015873015872,
+          0.2222222222222222
+        ],
+        "cost_per_reward_equivalent_a": 17.905041026153846,
+        "cost_per_reward_equivalent_b": 18.822536848000006
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GLM-5.3",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 7.389382010793652,
+        "cost_b": 11.376560069206352,
+        "cost_ratio_a_b": 0.6495269190196564,
+        "cost_ratio_95CI": [
+          0.4563210210615756,
+          0.8836827881057512
+        ],
+        "score_a": 0.4126984126984127,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": 0.0,
+        "paired_score_delta_95CI": [
+          -0.1111111111111111,
+          0.1111111111111111
+        ],
+        "cost_per_reward_equivalent_a": 17.905041026153846,
+        "cost_per_reward_equivalent_b": 27.566280167692316
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GLM-5.3",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.975408523174605,
+        "cost_b": 11.376560069206352,
+        "cost_ratio_a_b": 0.525238603481611,
+        "cost_ratio_95CI": [
+          0.34639773366596094,
+          0.7555227736056241
+        ],
+        "score_a": 0.31746031746031744,
+        "score_b": 0.4126984126984127,
+        "score_delta_a_b": -0.09523809523809523,
+        "paired_score_delta_95CI": [
+          -0.2222222222222222,
+          0.031746031746031744
+        ],
+        "cost_per_reward_equivalent_a": 18.822536848000006,
+        "cost_per_reward_equivalent_b": 27.566280167692316
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "DSH",
+        "common_tasks": 62,
+        "excluded_missing_cost": 1,
+        "cost_a": 4.6831436209677415,
+        "cost_b": 18.18161701612904,
+        "cost_ratio_a_b": 0.25757574900039376,
+        "cost_ratio_95CI": [
+          0.19483523067407477,
+          0.33315698142968403
+        ],
+        "score_a": 0.5645161290322581,
+        "score_b": 0.532258064516129,
+        "score_delta_a_b": 0.03225806451612903,
+        "paired_score_delta_95CI": [
+          -0.04838709677419355,
+          0.12903225806451613
+        ],
+        "cost_per_reward_equivalent_a": 8.295854414285714,
+        "cost_per_reward_equivalent_b": 34.159401666666675
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "OpenHands",
+        "common_tasks": 62,
+        "excluded_missing_cost": 1,
+        "cost_a": 4.6831436209677415,
+        "cost_b": 5.342222225806451,
+        "cost_ratio_a_b": 0.8766283810405853,
+        "cost_ratio_95CI": [
+          0.7371171747047061,
+          1.120947394669521
+        ],
+        "score_a": 0.5645161290322581,
+        "score_b": 0.5,
+        "score_delta_a_b": 0.06451612903225806,
+        "paired_score_delta_95CI": [
+          -0.03225806451612903,
+          0.1774193548387097
+        ],
+        "cost_per_reward_equivalent_a": 8.295854414285714,
+        "cost_per_reward_equivalent_b": 10.684444451612903
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "PI",
+        "common_tasks": 62,
+        "excluded_missing_cost": 1,
+        "cost_a": 4.6831436209677415,
+        "cost_b": 4.730722330645161,
+        "cost_ratio_a_b": 0.989942612068096,
+        "cost_ratio_95CI": [
+          0.8774494664229553,
+          1.1289167642366047
+        ],
+        "score_a": 0.5645161290322581,
+        "score_b": 0.5967741935483871,
+        "score_delta_a_b": -0.03225806451612903,
+        "paired_score_delta_95CI": [
+          -0.11290322580645161,
+          0.04838709677419355
+        ],
+        "cost_per_reward_equivalent_a": 8.295854414285714,
+        "cost_per_reward_equivalent_b": 7.927156337837838
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "Codex",
+        "b": "openJiuwen",
+        "common_tasks": 62,
+        "excluded_missing_cost": 1,
+        "cost_a": 4.6831436209677415,
+        "cost_b": 10.863972854838712,
+        "cost_ratio_a_b": 0.4310709980172597,
+        "cost_ratio_95CI": [
+          0.36898378887031047,
+          0.5200515993965176
+        ],
+        "score_a": 0.5645161290322581,
+        "score_b": 0.532258064516129,
+        "score_delta_a_b": 0.03225806451612903,
+        "paired_score_delta_95CI": [
+          -0.04838709677419355,
+          0.12903225806451613
+        ],
+        "cost_per_reward_equivalent_a": 8.295854414285714,
+        "cost_per_reward_equivalent_b": 20.41110051515152
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 19.94414521428572,
+        "cost_b": 5.401576111111111,
+        "cost_ratio_a_b": 3.6922825493952325,
+        "cost_ratio_95CI": [
+          2.6008081443319764,
+          5.135408286882577
+        ],
+        "score_a": 0.5238095238095238,
+        "score_b": 0.49206349206349204,
+        "score_delta_a_b": 0.031746031746031744,
+        "paired_score_delta_95CI": [
+          -0.06349206349206349,
+          0.14285714285714285
+        ],
+        "cost_per_reward_equivalent_a": 38.07518631818183,
+        "cost_per_reward_equivalent_b": 10.977396612903226
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 19.94414521428572,
+        "cost_b": 4.6556315,
+        "cost_ratio_a_b": 4.283875391401944,
+        "cost_ratio_95CI": [
+          3.133168499483431,
+          5.910708169832161
+        ],
+        "score_a": 0.5238095238095238,
+        "score_b": 0.6031746031746031,
+        "score_delta_a_b": -0.07936507936507936,
+        "paired_score_delta_95CI": [
+          -0.19047619047619047,
+          0.015873015873015872
+        ],
+        "cost_per_reward_equivalent_a": 38.07518631818183,
+        "cost_per_reward_equivalent_b": 7.718546960526315
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 19.94414521428572,
+        "cost_b": 11.072663507936507,
+        "cost_ratio_a_b": 1.8012057532490204,
+        "cost_ratio_95CI": [
+          1.295222178158711,
+          2.502382695966182
+        ],
+        "score_a": 0.5238095238095238,
+        "score_b": 0.5396825396825397,
+        "score_delta_a_b": -0.015873015873015872,
+        "paired_score_delta_95CI": [
+          -0.1111111111111111,
+          0.09523809523809523
+        ],
+        "cost_per_reward_equivalent_a": 38.07518631818183,
+        "cost_per_reward_equivalent_b": 20.516994147058824
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.401576111111111,
+        "cost_b": 4.6556315,
+        "cost_ratio_a_b": 1.1602241524293988,
+        "cost_ratio_95CI": [
+          0.8956529086632581,
+          1.463530813290555
+        ],
+        "score_a": 0.49206349206349204,
+        "score_b": 0.6031746031746031,
+        "score_delta_a_b": -0.1111111111111111,
+        "paired_score_delta_95CI": [
+          -0.2222222222222222,
+          0.0
+        ],
+        "cost_per_reward_equivalent_a": 10.977396612903226,
+        "cost_per_reward_equivalent_b": 7.718546960526315
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 5.401576111111111,
+        "cost_b": 11.072663507936507,
+        "cost_ratio_a_b": 0.48782988006810146,
+        "cost_ratio_95CI": [
+          0.36064437520235,
+          0.6440977680005062
+        ],
+        "score_a": 0.49206349206349204,
+        "score_b": 0.5396825396825397,
+        "score_delta_a_b": -0.047619047619047616,
+        "paired_score_delta_95CI": [
+          -0.14285714285714285,
+          0.047619047619047616
+        ],
+        "cost_per_reward_equivalent_a": 10.977396612903226,
+        "cost_per_reward_equivalent_b": 20.516994147058824
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "GPT-6 Astra",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 4.6556315,
+        "cost_b": 11.072663507936507,
+        "cost_ratio_a_b": 0.4204617521938603,
+        "cost_ratio_95CI": [
+          0.34638925668940646,
+          0.5255957042253732
+        ],
+        "score_a": 0.6031746031746031,
+        "score_b": 0.5396825396825397,
+        "score_delta_a_b": 0.06349206349206349,
+        "paired_score_delta_95CI": [
+          -0.031746031746031744,
+          0.15873015873015872
+        ],
+        "cost_per_reward_equivalent_a": 7.718546960526315,
+        "cost_per_reward_equivalent_b": 20.516994147058824
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "OpenHands",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 7.854719923809523,
+        "cost_b": 8.75157834761905,
+        "cost_ratio_a_b": 0.8975203799605445,
+        "cost_ratio_95CI": [
+          0.5597284057701749,
+          1.5626479365378956
+        ],
+        "score_a": 0.1746031746031746,
+        "score_b": 0.1111111111111111,
+        "score_delta_a_b": 0.06349206349206349,
+        "paired_score_delta_95CI": [
+          -0.047619047619047616,
+          0.1746031746031746
+        ],
+        "cost_per_reward_equivalent_a": 44.9861232,
+        "cost_per_reward_equivalent_b": 78.76420512857145
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 7.854719923809523,
+        "cost_b": 7.726861278746031,
+        "cost_ratio_a_b": 1.0165472939724165,
+        "cost_ratio_95CI": [
+          0.5600687205216957,
+          2.4060522719926323
+        ],
+        "score_a": 0.1746031746031746,
+        "score_b": 0.1111111111111111,
+        "score_delta_a_b": 0.06349206349206349,
+        "paired_score_delta_95CI": [
+          -0.031746031746031744,
+          0.15873015873015872
+        ],
+        "cost_per_reward_equivalent_a": 44.9861232,
+        "cost_per_reward_equivalent_b": 69.54175150871428
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Kimi K3",
+        "a": "DSH",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 7.854719923809523,
+        "cost_b": 11.91548080952381,
+        "cost_ratio_a_b": 0.6592029351875923,
+        "cost_ratio_95CI": [
+          0.47195012650168655,
+          0.9333770923449382
+        ],
+        "score_a": 0.1746031746031746,
+        "score_b": 0.2857142857142857,
+        "score_delta_a_b": -0.1111111111111111,
+        "paired_score_delta_95CI": [
+          -0.20634920634920634,
+          -0.031746031746031744
+        ],
+        "cost_per_reward_equivalent_a": 44.9861232,
+        "cost_per_reward_equivalent_b": 41.704182833333334
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Kimi K3",
+        "a": "OpenHands",
+        "b": "PI",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 8.75157834761905,
+        "cost_b": 7.726861278746031,
+        "cost_ratio_a_b": 1.1326175055959224,
+        "cost_ratio_95CI": [
+          0.5565060494110278,
+          2.8967680515489125
+        ],
+        "score_a": 0.1111111111111111,
+        "score_b": 0.1111111111111111,
+        "score_delta_a_b": 0.0,
+        "paired_score_delta_95CI": [
+          -0.1111111111111111,
+          0.1111111111111111
+        ],
+        "cost_per_reward_equivalent_a": 78.76420512857145,
+        "cost_per_reward_equivalent_b": 69.54175150871428
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Kimi K3",
+        "a": "OpenHands",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 8.75157834761905,
+        "cost_b": 11.91548080952381,
+        "cost_ratio_a_b": 0.7344712720802743,
+        "cost_ratio_95CI": [
+          0.4437044028969111,
+          1.1438977258158214
+        ],
+        "score_a": 0.1111111111111111,
+        "score_b": 0.2857142857142857,
+        "score_delta_a_b": -0.1746031746031746,
+        "paired_score_delta_95CI": [
+          -0.30158730158730157,
+          -0.06349206349206349
+        ],
+        "cost_per_reward_equivalent_a": 78.76420512857145,
+        "cost_per_reward_equivalent_b": 41.704182833333334
+      },
+      {
+        "benchmark": "Terminal-Bench 4",
+        "model": "Kimi K3",
+        "a": "PI",
+        "b": "openJiuwen",
+        "common_tasks": 63,
+        "excluded_missing_cost": 0,
+        "cost_a": 7.726861278746031,
+        "cost_b": 11.91548080952381,
+        "cost_ratio_a_b": 0.6484724705838226,
+        "cost_ratio_95CI": [
+          0.2701683496328082,
+          1.2495544379601284
+        ],
+        "score_a": 0.1111111111111111,
+        "score_b": 0.2857142857142857,
+        "score_delta_a_b": -0.1746031746031746,
+        "paired_score_delta_95CI": [
+          -0.2857142857142857,
+          -0.07936507936507936
+        ],
+        "cost_per_reward_equivalent_a": 69.54175150871428,
+        "cost_per_reward_equivalent_b": 41.704182833333334
+      }
+    ]
+  },
+  "seed": 1706
+}

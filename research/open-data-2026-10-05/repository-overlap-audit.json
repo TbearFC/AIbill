@@ -1,0 +1,6 @@
+{
+  "train_repositories": 50,
+  "test_repositories": 19,
+  "overlap": 10,
+  "note": "Task-heldout evaluation does not establish generalization to new repositories."
+}

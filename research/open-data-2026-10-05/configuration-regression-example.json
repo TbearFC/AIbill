@@ -1,0 +1,29 @@
+{
+  "benchmark": "ALE-CLI",
+  "model": "GPT-6 Astra",
+  "baseline": "DSH",
+  "candidate": "PI",
+  "paired_tasks": 99,
+  "runs_per_config": 99,
+  "unmatched_baseline_tasks": 0,
+  "unmatched_candidate_tasks": 0,
+  "mean_cost_baseline": 6.792799782828283,
+  "mean_cost_candidate": 2.6966953636363638,
+  "candidate_baseline_cost_ratio": 0.3969932060199123,
+  "cost_ratio_task_bootstrap_95CI": [
+    0.3220939310105017,
+    0.5030586053069832
+  ],
+  "mean_quality_baseline": 0.4902343783539482,
+  "mean_quality_candidate": 0.5845620788564717,
+  "quality_difference_candidate_baseline": 0.09432770050252354,
+  "quality_difference_task_bootstrap_95CI": [
+    0.029297968131949452,
+    0.16396159083240763
+  ],
+  "quality_margin": 0.05,
+  "quality_margin_supported": true,
+  "sample_decision": "lower_cost_with_quality_margin_supported",
+  "method": "Equal weight per paired task; aggregate repeats before task bootstrap. Single comparison, no multiplicity correction.",
+  "limit": "Historical observed comparison; not a guarantee of production savings. Predeclare a candidate and margin before prospective testing."
+}

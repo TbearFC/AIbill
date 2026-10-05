@@ -1,0 +1,65 @@
+[
+  {
+    "dataset": "ibragim-bad/swe_rebench_07_2026_trajectories",
+    "revision": "cdae27cdd16673f0c682871ad55d325f24cc7020",
+    "file": "README.md",
+    "url": "https://huggingface.co/datasets/ibragim-bad/swe_rebench_07_2026_trajectories/resolve/cdae27cdd16673f0c682871ad55d325f24cc7020/README.md",
+    "bytes": 1379,
+    "sha256": "940fe4681c1b309b374d41b1ad4da620399096fbb7e1fcba49203823a377ed8a",
+    "local_file": "sources/swe_rebench/README.md"
+  },
+  {
+    "dataset": "ibragim-bad/swe_rebench_07_2026_trajectories",
+    "revision": "cdae27cdd16673f0c682871ad55d325f24cc7020",
+    "file": "schema.json",
+    "url": "https://huggingface.co/datasets/ibragim-bad/swe_rebench_07_2026_trajectories/resolve/cdae27cdd16673f0c682871ad55d325f24cc7020/schema.json",
+    "bytes": 5729,
+    "sha256": "3ec6516a7d534ca15e03caac11743146159d9b71fa4e696273f26bd26366fa3e",
+    "local_file": "sources/swe_rebench/schema.json"
+  },
+  {
+    "dataset": "ibragim-bad/swe_rebench_07_2026_trajectories",
+    "revision": "cdae27cdd16673f0c682871ad55d325f24cc7020",
+    "file": "manifest.json",
+    "url": "https://huggingface.co/datasets/ibragim-bad/swe_rebench_07_2026_trajectories/resolve/cdae27cdd16673f0c682871ad55d325f24cc7020/manifest.json",
+    "bytes": 1501,
+    "sha256": "469333299f717d534fe0743b2554f8ac87c3588da4b76c5b5d58114a62991577",
+    "local_file": "sources/swe_rebench/manifest.json"
+  },
+  {
+    "dataset": "ibragim-bad/swe_rebench_07_2026_trajectories",
+    "revision": "cdae27cdd16673f0c682871ad55d325f24cc7020",
+    "file": "index.jsonl",
+    "url": "https://huggingface.co/datasets/ibragim-bad/swe_rebench_07_2026_trajectories/resolve/cdae27cdd16673f0c682871ad55d325f24cc7020/index.jsonl",
+    "bytes": 41195,
+    "sha256": "db3879a1e77db5b412fd8acebbd794da8d845acb84fbee2d88f16b7eaced093f",
+    "local_file": "sources/swe_rebench/index.jsonl"
+  },
+  {
+    "dataset": "yixuanli97/finding-the-right-fit",
+    "revision": "92ffbd7daf5ce7bc4b1e996e962a46ca52876820",
+    "file": "README.md",
+    "url": "https://huggingface.co/datasets/yixuanli97/finding-the-right-fit/resolve/92ffbd7daf5ce7bc4b1e996e962a46ca52876820/README.md",
+    "bytes": 6179,
+    "sha256": "98d18ffaf3d6c6ed9824e0544e8bf8f97ec4c5a12043a5aa896d781eefc42378",
+    "local_file": "sources/right_fit/README.md"
+  },
+  {
+    "dataset": "yixuanli97/finding-the-right-fit",
+    "revision": "92ffbd7daf5ce7bc4b1e996e962a46ca52876820",
+    "file": "results/task_level.tsv",
+    "url": "https://huggingface.co/datasets/yixuanli97/finding-the-right-fit/resolve/92ffbd7daf5ce7bc4b1e996e962a46ca52876820/results/task_level.tsv",
+    "bytes": 806684,
+    "sha256": "83e9ad5c50cd71cd517bfe975ef8030babee49bfdadeba48eeee0952d1ca0b0d",
+    "local_file": "sources/right_fit/results/task_level.tsv"
+  },
+  {
+    "dataset": "yixuanli97/finding-the-right-fit",
+    "revision": "92ffbd7daf5ce7bc4b1e996e962a46ca52876820",
+    "file": "results/config_cost_summary.csv",
+    "url": "https://huggingface.co/datasets/yixuanli97/finding-the-right-fit/resolve/92ffbd7daf5ce7bc4b1e996e962a46ca52876820/results/config_cost_summary.csv",
+    "bytes": 13645,
+    "sha256": "5c47fd12770175a6cd35db1e6530ec93629108933b4ee0ae59a37762cebfe74f",
+    "local_file": "sources/right_fit/results/config_cost_summary.csv"
+  }
+]

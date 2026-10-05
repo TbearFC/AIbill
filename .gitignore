@@ -37,3 +37,7 @@ usage.json
 report.html
 sources.json
 .sources.tmp
+
+# Research datasets, user records and generated analysis stay local.
+research/open-data-2026-10-05/data/
+research/open-data-2026-10-05/outputs/

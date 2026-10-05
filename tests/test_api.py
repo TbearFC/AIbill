@@ -151,6 +151,37 @@ class ReleaseChecks(unittest.TestCase):
                 "staged_not_release_allowlisted", [item["rule"] for item in result["findings"]]
             )
 
+    def test_research_datasets_are_rejected_if_staged(self):
+        module = self.checker()
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            subprocess.run(["git", "init", "-q", str(root)], check=True)
+            study = root / module.RESEARCH_ROOT
+            (study / "data").mkdir(parents=True)
+            (study / "data/private.csv").write_text("synthetic local records")
+            self.assertEqual(module.check_tree(root)["status"], "passed")
+            subprocess.run(
+                ["git", "add", module.RESEARCH_ROOT + "/data/private.csv"],
+                cwd=root,
+                check=True,
+            )
+            result = module.check_tree(root)
+            self.assertIn(
+                "staged_not_release_allowlisted", [item["rule"] for item in result["findings"]]
+            )
+
+    def test_research_allowlist_still_scans_private_paths(self):
+        module = self.checker()
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            study = root / module.RESEARCH_ROOT
+            study.mkdir(parents=True)
+            (study / "README.md").write_text("/home/" + "fictional-person/fixture")
+            result = module.check_tree(root)
+            self.assertIn(
+                "personal_absolute_path", [item["rule"] for item in result["findings"]]
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

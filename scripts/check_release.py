@@ -19,6 +19,17 @@ ROOT_FILES = {
 }
 EXAMPLE_FILES = {"examples/events.jsonl", "examples/prices.json"}
 TRANSIENT_DIRECTORIES = {".git", "__pycache__", "build", "dist", ".venv"}
+RESEARCH_ROOT = "research/open-data-2026-10-05"
+RESEARCH_FILES = {
+    "README.md", "analyze.py", "collect.py", "fetch_sources.py", "compare_configs.py",
+    "dig_deeper.py", "build_report.py", "test_integrity.py", "protocol.json",
+    "protocol-amendment.json", "source-manifest.json", "requirements-research.txt",
+    "task-record-template.csv", "research.html", "findings.svg", "paired-cost-quality.svg",
+    "results.json", "configuration-regression-example.json", "quality-regression-example.json",
+    "configuration-summary.csv", "harness-paired-comparisons.csv", "right-fit-summary.csv",
+    "cost-aware-transfer-diagnostic.json", "repeat-variation-ci.json", "repository-overlap-audit.json",
+    "heldout-by-configuration.csv",
+}
 PATTERNS = {
     "private_key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
     "api_credential": re.compile(
@@ -37,6 +48,8 @@ def allowed_file(relative):
     name = relative.as_posix()
     if name in ROOT_FILES or name in EXAMPLE_FILES:
         return True
+    if relative.parent.as_posix() == RESEARCH_ROOT:
+        return relative.name in RESEARCH_FILES
     if len(parts) == 2 and parts[0] == "agentcost":
         return parts[1].endswith(".py") or parts[1] in {"prices.json", "dashboard.html"}
     if len(parts) == 2 and parts[0] == "tests":
@@ -54,6 +67,12 @@ def check_tree(root, deny_text=()):
             continue
         if any(
             part in TRANSIENT_DIRECTORIES or part.endswith(".egg-info") for part in relative.parts
+        ):
+            continue
+        # Ignore local datasets and analysis outputs in the worktree only.
+        # The index scan below still rejects any force-added private files.
+        if relative.as_posix().startswith(
+            (RESEARCH_ROOT + "/data/", RESEARCH_ROOT + "/outputs/")
         ):
             continue
         if path.is_symlink():

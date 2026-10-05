@@ -1,0 +1,15 @@
+{
+  "purpose": "Independent offline research on cost variance and early cost risk; no model API calls and no personal logs.",
+  "source_revisions": {"swe_rebench": "cdae27cdd16673f0c682871ad55d325f24cc7020", "right_fit": "92ffbd7daf5ce7bc4b1e996e962a46ca52876820"},
+  "split": "Task instance SHA256 first 8 hex digits modulo 10: 0,1 final test; 2,3 validation; 4..9 train. All configurations and repeated runs of a task stay together.",
+  "prediction_population": "Common scaffold trajectories that reach the tenth tool result, have positive reported cost, and evaluation_matches_selected=true. Native systems separately descriptive only.",
+  "prefix_boundary": "Immediately after tenth tool result, inclusive; full-run usage, steps, wall time, exit status, outcome, final messages are forbidden as features.",
+  "features": ["participant key", "language", "prefix tool diversity", "tool repeat count", "repeated input count", "tool error count", "observed text character counts", "truncation count", "assistant character counts"],
+  "target": "Final total reported USD cost; remaining USD unavailable without per-event usage. Source cost is historical harness accounting, not audited invoices.",
+  "models": "M0 training arithmetic mean cost per configuration; M1 random forest regressors on log1p(cost), fixed 300 trees, min_samples_leaf=15, max_depth=8, seed=1706. Back-transform via training-only Duan residual smearing. Evaluate M1 configuration+language and M2 those+prefix features. No hyperparameter search on final test.",
+  "metrics": ["WAPE pooled", "macro WAPE per configuration", "MAE", "log1p MAE", "WAPE by language/configuration"],
+  "uncertainty": "2000 bootstrap samples over heldout task IDs, preserving all configurations and runs per sampled task; percentile 95% CI of relative WAPE improvement.",
+  "risk_alert": "High cost defined by training-only 90th percentile within each configuration; select alert threshold on validation to approximately 10% alerts; report final-test precision, recall, actual alert rate and cost share. No automatic stopping or savings claims.",
+  "right_fit_terms": "Descriptive cost/quality comparisons only. Do not use to train, fine-tune or distill models. No benchmark text is redistributed.",
+  "interpretation": "Configurations are not human users; this does not validate multi-user weekly cost prediction, prove production savings, or estimate causal effects of interrupting a run. Benchmark success is not human acceptance."
+}

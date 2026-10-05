@@ -1,0 +1,8 @@
+{
+  "timing": "After inspecting source schemas and sample records, before fitting or evaluating any prediction model.",
+  "reason": "Reported USD is absent in common-scaffold model trajectories. Monetary prediction is therefore not identifiable in the preregistered population.",
+  "replacement_target": "Total reported tokens, in millions, among common-scaffold runs with positive token_total and evaluation_matches_selected=true. All other split, prefix-boundary, model parameters and metrics stay fixed.",
+  "risk_alert": "Training-only configuration token P90 defines high usage. Validation-only 90th percentile of predicted/P90 ratio fixes alert cutoff; never optimize against test labels.",
+  "restriction": "Token volume is not money: cached/input/output prices differ, and aggregate usage does not identify remaining usage at prefix. No USD prediction or savings claim from this dataset.",
+  "original_target_status": "Not executable with these fields. Preserve original protocol for audit."
+}
